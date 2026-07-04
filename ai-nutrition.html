@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI儿童精准营养 — 镒流智能</title>
+<meta name="description" content="镒流智能AI儿童营养方案，通过计算机视觉识别食物，结合营养知识图谱，为儿童提供个性化膳食建议。">
+<meta name="keywords" content="AI儿童营养,儿童营养AI,智能膳食分析,食物识别AI,儿童营养管理,镒流智能">
+<link rel="canonical" href="https://vladimirpeng.github.io/yiliu-ai-website/ai-nutrition.html">
+
+<meta property="og:title" content="AI儿童精准营养 — 镒流智能">
+<meta property="og:description" content="计算机视觉+营养知识图谱，为儿童提供个性化膳食方案">
+<meta property="og:type" content="website">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "AI儿童精准营养方案",
+  "author": {"@type": "Organization", "name": "镒流智能"},
+  "publisher": {"@type": "Organization", "name": "镒流智能"},
+  "about": "AI食物识别与儿童营养分析"
+}
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+:root{--bg:#0a0a0f;--bg-2:#12121a;--bg-3:#1a1a26;--text:#e8e8f0;--text-dim:#8888a0;--text-mute:#555568;--accent:#00d4ff;--accent-2:#7c5cff;--accent-glow:rgba(0,212,255,0.15);--border:rgba(255,255,255,0.06);--border-hover:rgba(255,255,255,0.12);--radius:20px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+.ambient{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 800px 600px at 20% 0%,rgba(0,212,255,0.10),transparent 60%),radial-gradient(ellipse 600px 500px at 80% 30%,rgba(124,92,255,0.06),transparent 60%)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 24px;background:rgba(10,10,15,0.7);backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:18px;font-weight:700;letter-spacing:-0.02em;background:linear-gradient(135deg,#fff,#a0a0c0);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.logo a{text-decoration:none;color:inherit}
+.nav-links{display:flex;gap:32px;list-style:none}.nav-links a{text-decoration:none;color:var(--text-dim);font-size:14px}.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--accent);color:#000;padding:9px 22px;border-radius:100px;font-size:13px;font-weight:600;text-decoration:none}
+.page-hero{position:relative;z-index:1;padding:160px 24px 80px;text-align:center}
+.page-hero h1{font-size:clamp(32px,5vw,52px);font-weight:700;letter-spacing:-0.03em;margin-bottom:20px;background:linear-gradient(180deg,#fff,#a0a0b8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.page-hero p{font-size:18px;color:var(--text-dim);font-weight:300;max-width:580px;margin:0 auto}
+.section{position:relative;z-index:1;padding:80px 24px}.section-inner{max-width:1000px;margin:0 auto}
+.section-label{font-size:13px;color:var(--accent);font-weight:500;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+.section-title{font-size:clamp(24px,3.5vw,36px);font-weight:700;letter-spacing:-0.02em;margin-bottom:32px}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--border);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);margin-top:48px}
+.feature-card{background:var(--bg);padding:40px 32px;transition:background 0.3s}.feature-card:hover{background:var(--bg-2)}
+.feature-card .icon{font-size:28px;margin-bottom:16px}.feature-card h3{font-size:18px;font-weight:600;margin-bottom:10px;color:var(--accent)}.feature-card p{font-size:14px;color:var(--text-dim);line-height:1.7;font-weight:300}
+.flow{display:flex;justify-content:center;gap:0;margin-top:60px;flex-wrap:wrap}
+.flow-step{background:var(--bg-2);border:1px solid var(--border);padding:24px 28px;text-align:center;min-width:150px;border-radius:var(--radius)}
+.flow-step .icon{font-size:24px;margin-bottom:8px}.flow-step h4{font-size:14px;margin-bottom:4px}.flow-step p{font-size:12px;color:var(--text-mute)}
+.flow-arrow{display:flex;align-items:center;color:var(--text-mute);padding:0 6px;font-size:18px}
+.cta{text-align:center;padding:100px 24px;position:relative;z-index:1}.cta h2{font-size:32px;font-weight:700;margin-bottom:16px}.cta p{font-size:16px;color:var(--text-dim);margin-bottom:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:100px;font-size:15px;font-weight:500;text-decoration:none;transition:all 0.25s}
+.btn-primary{background:var(--accent);color:#000}.btn-primary:hover{box-shadow:0 8px 40px var(--accent-glow);transform:translateY(-2px)}
+footer{border-top:1px solid var(--border);padding:48px 24px 32px;text-align:center}footer a{color:var(--text-dim);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}.flow{flex-direction:column}.flow-arrow{transform:rotate(90deg);padding:8px 0}}
+</style>
+</head>
+<body>
+<div class="ambient"></div>
+<nav><div class="nav-inner"><div class="logo"><a href="/">镒流智能</a></div><ul class="nav-links"><li><a href="/#business">业务</a></li><li><a href="/#about">关于</a></li><li><a href="/#contact">联系</a></li></ul><a href="/#contact" class="nav-cta">联系我们</a></div></nav>
+
+<section class="page-hero">
+  <h1>AI 儿童精准营养</h1>
+  <p>拍一张照片，AI 帮你看懂孩子的每一餐。</p>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">CORE</div>
+    <h2 class="section-title">核心能力</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><div class="icon">📸</div><h3>CV 食物识别</h3><p>基于计算机视觉的食物种类与分量识别。孩子餐盘拍照上传，AI 自动识别菜品、估算重量、分析营养构成。</p></div>
+      <div class="feature-card"><div class="icon">🧠</div><h3>营养知识图谱</h3><p>覆盖中国居民膳食指南、儿童各年龄段营养参考摄入量、常见食材营养数据库。识别结果对照知识图谱，生成结构化营养分析。</p></div>
+      <div class="feature-card"><div class="icon">📋</div><h3>个性化方案</h3><p>结合儿童年龄、身高体重、饮食偏好与过敏史，生成可执行的膳食改善建议——不是泛泛而谈，而是具体到"这顿少了什么，下顿怎么补"。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="section-inner">
+    <div class="section-label">WORKFLOW</div>
+    <h2 class="section-title">工作流程</h2>
+    <div class="flow">
+      <div class="flow-step"><div class="icon">📸</div><h4>拍照上传</h4><p>餐盘照片</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="icon">🔍</div><h4>AI 识别</h4><p>食物+分量</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="icon">📊</div><h4>营养分析</h4><p>对照知识图谱</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="icon">💡</div><h4>建议生成</h4><p>个性化方案</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="icon">📈</div><h4>长期追踪</h4><p>营养趋势</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="section-inner">
+    <div class="section-label">SCENES</div>
+    <h2 class="section-title">适用场景</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><div class="icon">🏫</div><h3>学校食堂</h3><p>批量分析学生餐营养，生成周度营养报告，辅助食堂优化菜单</p></div>
+      <div class="feature-card"><div class="icon">🏠</div><h3>家庭场景</h3><p>家长拍照记录孩子饮食，AI 给出改善建议，培养科学喂养习惯</p></div>
+      <div class="feature-card"><div class="icon">🏥</div><h3>儿童健康机构</h3><p>配合体检数据，提供饮食维度的精准分析，辅助营养师工作</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <h2>让 AI 看懂孩子的每一餐</h2>
+  <p>了解 AI 儿童营养方案如何落地你的场景</p>
+  <a href="mailto:1flowShenzhen@gmail.com" class="btn btn-primary">交流咨询</a>
+</div>
+
+<footer><div style="font-size:18px;font-weight:700;margin-bottom:12px;letter-spacing:-0.02em;">镒流智能</div><div style="font-size:13px;color:var(--text-mute);line-height:1.8;">深圳市镒流智能科技有限公司 © 2026 · 深圳市南山区腾讯众创空间<br><a href="mailto:1flowShenzhen@gmail.com">1flowShenzhen@gmail.com</a></div></footer>
+</body>
+</html>

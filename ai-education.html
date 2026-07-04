@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI+教育 — 镒流智能</title>
+<meta name="description" content="镒流智能AI+教育方案，面向青少年的AI通识启蒙课程和面向职场人的AI实操技能培训，场景驱动，学完即用。">
+<meta name="keywords" content="AI教育,AI素养课程,青少年AI通识,职场AI培训,AI技能培训,镒流智能">
+<link rel="canonical" href="https://vladimirpeng.github.io/yiliu-ai-website/ai-education.html">
+<meta property="og:title" content="AI+教育 — 镒流智能">
+<meta property="og:description" content="分层级AI素养课程：青少年通识启蒙 + 职场人实操技能">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TechArticle","headline":"AI+教育方案","author":{"@type":"Organization","name":"镒流智能"},"publisher":{"@type":"Organization","name":"镒流智能"},"about":"AI素养教育与技能培训"}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+:root{--bg:#0a0a0f;--bg-2:#12121a;--bg-3:#1a1a26;--text:#e8e8f0;--text-dim:#8888a0;--text-mute:#555568;--accent:#7c5cff;--accent-2:#00d4ff;--accent-glow:rgba(124,92,255,0.15);--border:rgba(255,255,255,0.06);--border-hover:rgba(255,255,255,0.12);--radius:20px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+.ambient{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 800px 600px at 20% 0%,rgba(124,92,255,0.12),transparent 60%),radial-gradient(ellipse 600px 500px at 80% 30%,rgba(0,212,255,0.06),transparent 60%)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 24px;background:rgba(10,10,15,0.7);backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:18px;font-weight:700;letter-spacing:-0.02em;background:linear-gradient(135deg,#fff,#a0a0c0);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.logo a{text-decoration:none;color:inherit}
+.nav-links{display:flex;gap:32px;list-style:none}.nav-links a{text-decoration:none;color:var(--text-dim);font-size:14px}.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--accent);color:#fff;padding:9px 22px;border-radius:100px;font-size:13px;font-weight:500;text-decoration:none}
+.page-hero{position:relative;z-index:1;padding:160px 24px 80px;text-align:center}
+.page-hero h1{font-size:clamp(32px,5vw,52px);font-weight:700;letter-spacing:-0.03em;margin-bottom:20px;background:linear-gradient(180deg,#fff,#a0a0b8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.page-hero p{font-size:18px;color:var(--text-dim);font-weight:300;max-width:580px;margin:0 auto}
+.section{position:relative;z-index:1;padding:80px 24px}.section-inner{max-width:1000px;margin:0 auto}
+.section-label{font-size:13px;color:var(--accent);font-weight:500;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+.section-title{font-size:clamp(24px,3.5vw,36px);font-weight:700;letter-spacing:-0.02em;margin-bottom:32px}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--border);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);margin-top:48px}
+.feature-card{background:var(--bg);padding:40px 32px;transition:background 0.3s}.feature-card:hover{background:var(--bg-2)}
+.feature-card .icon{font-size:28px;margin-bottom:16px}.feature-card h3{font-size:18px;font-weight:600;margin-bottom:10px;color:var(--accent)}.feature-card p{font-size:14px;color:var(--text-dim);line-height:1.7;font-weight:300}
+.level-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:48px}
+.level-card{background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius);padding:36px 28px}
+.level-card .badge{display:inline-block;font-size:12px;color:var(--accent);padding:4px 12px;border-radius:100px;background:rgba(124,92,255,0.08);border:1px solid rgba(124,92,255,0.2);margin-bottom:16px}
+.level-card h4{font-size:17px;margin-bottom:10px}.level-card p{font-size:14px;color:var(--text-dim);line-height:1.7;margin-bottom:16px}
+.level-card ul{list-style:none;padding:0}.level-card li{font-size:13px;color:var(--text-mute);padding:4px 0;padding-left:20px;position:relative}
+.level-card li::before{content:'→';position:absolute;left:0;color:var(--accent)}
+.cta{text-align:center;padding:100px 24px;position:relative;z-index:1}.cta h2{font-size:32px;font-weight:700;margin-bottom:16px}.cta p{font-size:16px;color:var(--text-dim);margin-bottom:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:100px;font-size:15px;font-weight:500;text-decoration:none;transition:all 0.25s}
+.btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{box-shadow:0 8px 40px var(--accent-glow);transform:translateY(-2px)}
+footer{border-top:1px solid var(--border);padding:48px 24px 32px;text-align:center}footer a{color:var(--text-dim);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<div class="ambient"></div>
+<nav><div class="nav-inner"><div class="logo"><a href="/">镒流智能</a></div><ul class="nav-links"><li><a href="/#business">业务</a></li><li><a href="/#about">关于</a></li><li><a href="/#contact">联系</a></li></ul><a href="/#contact" class="nav-cta">联系我们</a></div></nav>
+
+<section class="page-hero">
+  <h1>AI+ 教育</h1>
+  <p>不是教 AI 是什么，而是教 AI 怎么用。</p>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">PHILOSOPHY</div>
+    <h2 class="section-title">教学理念</h2>
+    <p style="color:var(--text-dim);font-size:16px;font-weight:300;max-width:680px;">AI 教育不是技术课，而是素养课。目标不是"学会一个工具"，而是"建立与 AI 协作的思维方式"。所有课程遵循三条原则：场景驱动（从真实问题出发）、分层教学（不同基础不同路径）、学完即用（每节课结束有可交付物）。</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="section-inner">
+    <div class="section-label">COURSES</div>
+    <h2 class="section-title">课程体系</h2>
+    <div class="level-grid">
+      <div class="level-card">
+        <span class="badge">L1 · 启蒙</span>
+        <h4>青少年 AI 通识（10-15岁）</h4>
+        <p>建立对 AI 的基本认知与使用能力，理解 AI 能做什么、不能做什么。</p>
+        <ul>
+          <li>AI 是什么：从图灵测试到大模型</li>
+          <li>AI 工具使用：对话、搜索、创作</li>
+          <li>AI 伦理：偏见、隐私与安全</li>
+          <li>AI 项目实践：解决一个真实问题</li>
+        </ul>
+      </div>
+      <div class="level-card">
+        <span class="badge">L2 · 进阶</span>
+        <h4>高中生 AI 思维与方法（15-18岁）</h4>
+        <p>从使用者进阶为思考者，理解 AI 背后的逻辑与局限。</p>
+        <ul>
+          <li>Prompt 工程：如何与 AI 高效协作</li>
+          <li>AI 识别信息：事实核查与信息素养</li>
+          <li>AI 与学科：用 AI 辅助学习而非替代学习</li>
+          <li>AI 创造：从零搭建一个 AI 应用</li>
+        </ul>
+      </div>
+      <div class="level-card">
+        <span class="badge">L3 · 实战</span>
+        <h4>职场人 AI 技能培训</h4>
+        <p>面向各行各业的职场人，把 AI 变成日常工作中的生产力工具。</p>
+        <ul>
+          <li>办公场景：文档、数据、演示文稿</li>
+          <li>行业场景：营销、客服、运营、研发</li>
+          <li>AI 工作流搭建：从重复劳动中解放</li>
+          <li>团队 AI 协作：流程与规范</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="section-inner">
+    <div class="section-label">FEATURES</div>
+    <h2 class="section-title">教学特色</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><div class="icon">🎯</div><h3>场景驱动</h3><p>不做泛泛的"AI 概论"，每个模块从真实场景出发——学生学完当堂就能用。</p></div>
+      <div class="feature-card"><div class="icon">🧩</div><h3>项目制学习</h3><p>每个课程阶段以一个可交付项目为终点，学习过程就是创造过程。</p></div>
+      <div class="feature-card"><div class="icon">🔄</div><h3>持续更新</h3><p>AI 工具迭代极快，课程内容每季度更新，确保教的是最新可用工具。</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <h2>把 AI 变成你的技能</h2>
+  <p>了解课程方案或定制企业内训</p>
+  <a href="mailto:1flowShenzhen@gmail.com" class="btn btn-primary">交流咨询</a>
+</div>
+
+<footer><div style="font-size:18px;font-weight:700;margin-bottom:12px;letter-spacing:-0.02em;">镒流智能</div><div style="font-size:13px;color:var(--text-mute);line-height:1.8;">深圳市镒流智能科技有限公司 © 2026 · 深圳市南山区腾讯众创空间<br><a href="mailto:1flowShenzhen@gmail.com">1flowShenzhen@gmail.com</a></div></footer>
+</body>
+</html>

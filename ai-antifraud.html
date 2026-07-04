@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI防骗防诈 — 镒流智能</title>
+<meta name="description" content="镒流智能AI防骗防诈方案，Deepfake换脸检测、AI语音诈骗识别，为社区和学校提供反诈科普与技术检测一体化方案。">
+<meta name="keywords" content="AI防骗防诈,Deepfake检测,换脸检测,AI诈骗识别,反诈科普,镒流智能">
+<link rel="canonical" href="https://vladimirpeng.github.io/yiliu-ai-website/ai-antifraud.html">
+<meta property="og:title" content="AI防骗防诈 — 镒流智能">
+<meta property="og:description" content="Deepfake换脸检测+AI语音诈骗识别+反诈科普一体化方案">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TechArticle","headline":"AI防骗防诈方案","author":{"@type":"Organization","name":"镒流智能"},"publisher":{"@type":"Organization","name":"镒流智能"},"about":"Deepfake检测与AI反诈"}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+:root{--bg:#0a0a0f;--bg-2:#12121a;--bg-3:#1a1a26;--text:#e8e8f0;--text-dim:#8888a0;--text-mute:#555568;--accent:#ff4757;--accent-2:#7c5cff;--accent-glow:rgba(255,71,87,0.15);--border:rgba(255,255,255,0.06);--border-hover:rgba(255,255,255,0.12);--radius:20px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+.ambient{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 800px 600px at 20% 0%,rgba(255,71,87,0.08),transparent 60%),radial-gradient(ellipse 600px 500px at 80% 30%,rgba(124,92,255,0.06),transparent 60%)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 24px;background:rgba(10,10,15,0.7);backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:18px;font-weight:700;letter-spacing:-0.02em;background:linear-gradient(135deg,#fff,#a0a0c0);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.logo a{text-decoration:none;color:inherit}
+.nav-links{display:flex;gap:32px;list-style:none}.nav-links a{text-decoration:none;color:var(--text-dim);font-size:14px}.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--accent);color:#fff;padding:9px 22px;border-radius:100px;font-size:13px;font-weight:500;text-decoration:none}
+.page-hero{position:relative;z-index:1;padding:160px 24px 80px;text-align:center}
+.page-hero h1{font-size:clamp(32px,5vw,52px);font-weight:700;letter-spacing:-0.03em;margin-bottom:20px;background:linear-gradient(180deg,#fff,#a0a0b8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.page-hero p{font-size:18px;color:var(--text-dim);font-weight:300;max-width:580px;margin:0 auto}
+.section{position:relative;z-index:1;padding:80px 24px}.section-inner{max-width:1000px;margin:0 auto}
+.section-label{font-size:13px;color:var(--accent);font-weight:500;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+.section-title{font-size:clamp(24px,3.5vw,36px);font-weight:700;letter-spacing:-0.02em;margin-bottom:32px}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--border);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);margin-top:48px}
+.feature-card{background:var(--bg);padding:40px 32px;transition:background 0.3s}.feature-card:hover{background:var(--bg-2)}
+.feature-card .icon{font-size:28px;margin-bottom:16px}.feature-card h3{font-size:18px;font-weight:600;margin-bottom:10px;color:var(--accent)}.feature-card p{font-size:14px;color:var(--text-dim);line-height:1.7;font-weight:300}
+.threat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:48px}
+.threat-card{background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius);padding:32px;position:relative;overflow:hidden}
+.threat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent)}
+.threat-card .tag{display:inline-block;font-size:11px;color:var(--accent);padding:3px 10px;border-radius:100px;background:rgba(255,71,87,0.1);border:1px solid rgba(255,71,87,0.2);margin-bottom:12px}
+.threat-card h4{font-size:16px;margin-bottom:8px}.threat-card p{font-size:13px;color:var(--text-dim);line-height:1.6}
+.cta{text-align:center;padding:100px 24px;position:relative;z-index:1}.cta h2{font-size:32px;font-weight:700;margin-bottom:16px}.cta p{font-size:16px;color:var(--text-dim);margin-bottom:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:100px;font-size:15px;font-weight:500;text-decoration:none;transition:all 0.25s}
+.btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{box-shadow:0 8px 40px var(--accent-glow);transform:translateY(-2px)}
+footer{border-top:1px solid var(--border);padding:48px 24px 32px;text-align:center}footer a{color:var(--text-dim);text-decoration:none}
+@media(max-width:768px){.nav-links{display:none}}
+</style>
+</head>
+<body>
+<div class="ambient"></div>
+<nav><div class="nav-inner"><div class="logo"><a href="/">镒流智能</a></div><ul class="nav-links"><li><a href="/#business">业务</a></li><li><a href="/#about">关于</a></li><li><a href="/#contact">联系</a></li></ul><a href="/#contact" class="nav-cta">联系我们</a></div></nav>
+
+<section class="page-hero">
+  <h1>AI 防骗防诈</h1>
+  <p>AI 诈骗越来越真，防诈骗也要用 AI。</p>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">THREATS</div>
+    <h2 class="section-title">新型 AI 诈骗威胁</h2>
+    <div class="threat-grid">
+      <div class="threat-card"><span class="tag">Deepfake</span><h4>换脸视频诈骗</h4><p>诈骗者用 AI 换脸技术冒充亲友视频通话，面部几乎无法用肉眼分辨真伪。</p></div>
+      <div class="threat-card"><span class="tag">语音克隆</span><h4>AI 语音诈骗</h4><p>仅需几秒语音样本即可克隆音色，冒充家人打电话"急需用钱"。</p></div>
+      <div class="threat-card"><span class="tag">AI 钓鱼</span><h4>AI 生成钓鱼信息</h4><p>AI 批量生成高度个性化的钓鱼短信与邮件，语法正确、语气逼真，传统关键词过滤失效。</p></div>
+      <div class="threat-card"><span class="tag">合成身份</span><h4>虚拟身份诈骗</h4><p>AI 生成不存在的面孔与身份资料，用于社交平台诈骗与信用欺诈。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="section-inner">
+    <div class="section-label">CAPABILITIES</div>
+    <h2 class="section-title">核心能力</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><div class="icon">👁️</div><h3>Deepfake 检测</h3><p>基于深度学习的换脸检测引擎，分析视频帧的面部边缘伪影、光照一致性与频域特征，识别 AI 合成人脸。</p></div>
+      <div class="feature-card"><div class="icon">🎙️</div><h3>语音诈骗识别</h3><p>检测克隆语音中的合成痕迹——频谱异常、情感不自然、过渡不连续等信号。适用于电话录音鉴定。</p></div>
+      <div class="feature-card"><div class="icon">📚</div><h3>反诈科普内容</h3><p>面向不同人群（老人、学生、社区）的反诈教育内容包，配合真实案例与互动测试，提升识别能力。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="section-inner">
+    <div class="section-label">FOR</div>
+    <h2 class="section-title">服务对象</h2>
+    <div class="feature-grid">
+      <div class="feature-card"><div class="icon">🏘️</div><h3>社区</h3><p>面向老年群体的反诈科普讲座与技术检测服务，帮助社区建立 AI 诈骗防线。</p></div>
+      <div class="feature-card"><div class="icon">🎓</div><h3>学校</h3><p>面向学生的 AI 素养与网络安全教育课程，培养识别 AI 诈骗的能力。</p></div>
+      <div class="feature-card"><div class="icon">🚔</div><h3>公共安全机构</h3><p>提供技术检测工具与鉴定支持，辅助反诈工作中 AI 诈骗内容的识别取证。</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <h2>用 AI 对抗 AI 诈骗</h2>
+  <p>了解反诈方案如何落地你的社区或机构</p>
+  <a href="mailto:1flowShenzhen@gmail.com" class="btn btn-primary">交流咨询</a>
+</div>
+
+<footer><div style="font-size:18px;font-weight:700;margin-bottom:12px;letter-spacing:-0.02em;">镒流智能</div><div style="font-size:13px;color:var(--text-mute);line-height:1.8;">深圳市镒流智能科技有限公司 © 2026 · 深圳市南山区腾讯众创空间<br><a href="mailto:1flowShenzhen@gmail.com">1flowShenzhen@gmail.com</a></div></footer>
+</body>
+</html>
