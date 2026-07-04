@@ -32,13 +32,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 24px;background:rg
 .section-title{font-size:clamp(24px,3.5vw,36px);font-weight:700;letter-spacing:-0.02em;margin-bottom:32px}
 .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--border);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);margin-top:48px}
 .feature-card{background:var(--bg);padding:40px 32px;transition:background 0.3s}.feature-card:hover{background:var(--bg-2)}
-.feature-card .icon{font-size:28px;margin-bottom:16px}.feature-card h3{font-size:18px;font-weight:600;margin-bottom:10px;color:var(--accent)}.feature-card p{font-size:14px;color:var(--text-dim);line-height:1.7;font-weight:300}
+.feature-card .icon{width:28px;height:28px;margin-bottom:16px;color:var(--accent);display:flex;align-items:center;justify-content:center}.feature-card .icon svg{width:28px;height:28px}
+.feature-card h3{font-size:18px;font-weight:600;margin-bottom:10px;color:var(--accent)}.feature-card p{font-size:14px;color:var(--text-dim);line-height:1.7;font-weight:300}
 .level-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:48px}
 .level-card{background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius);padding:36px 28px}
 .level-card .badge{display:inline-block;font-size:12px;color:var(--accent);padding:4px 12px;border-radius:100px;background:rgba(124,92,255,0.08);border:1px solid rgba(124,92,255,0.2);margin-bottom:16px}
 .level-card h4{font-size:17px;margin-bottom:10px}.level-card p{font-size:14px;color:var(--text-dim);line-height:1.7;margin-bottom:16px}
-.level-card ul{list-style:none;padding:0}.level-card li{font-size:13px;color:var(--text-mute);padding:4px 0;padding-left:20px;position:relative}
-.level-card li::before{content:'→';position:absolute;left:0;color:var(--accent)}
+.level-card ul{list-style:none;padding:0}.level-card li{font-size:13px;color:var(--text-mute);padding:4px 0;padding-left:24px;position:relative}
+.level-card li::before{content:'';position:absolute;left:0;top:4px;width:16px;height:16px;display:flex;align-items:center;justify-content:center}
+.level-card li svg{position:absolute;left:0;top:3px;width:16px;height:16px;color:var(--accent)}
 .cta{text-align:center;padding:100px 24px;position:relative;z-index:1}.cta h2{font-size:32px;font-weight:700;margin-bottom:16px}.cta p{font-size:16px;color:var(--text-dim);margin-bottom:32px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:100px;font-size:15px;font-weight:500;text-decoration:none;transition:all 0.25s}
 .btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{box-shadow:0 8px 40px var(--accent-glow);transform:translateY(-2px)}
@@ -48,14 +50,14 @@ footer{border-top:1px solid var(--border);padding:48px 24px 32px;text-align:cent
 </head>
 <body>
 <div class="ambient"></div>
-<nav><div class="nav-inner"><div class="logo"><a href="/">镒流智能</a></div><ul class="nav-links"><li><a href="/#business">业务</a></li><li><a href="/#about">关于</a></li><li><a href="/#contact">联系</a></li></ul><a href="/#contact" class="nav-cta">联系我们</a></div></nav>
+<nav id="navbar"><div class="nav-inner"><div class="logo"><a href="/">镒流智能</a></div><ul class="nav-links"><li><a href="/#business">业务</a></li><li><a href="/#about">关于</a></li><li><a href="/#contact">联系</a></li></ul><a href="/#contact" class="nav-cta">联系我们</a></div></nav>
 
 <section class="page-hero">
-  <h1>AI+ 教育</h1>
-  <p>不是教 AI 是什么，而是教 AI 怎么用。</p>
+  <h1 id="hero-title">AI+ 教育</h1>
+  <p id="hero-desc">不是教 AI 是什么，而是教 AI 怎么用。</p>
 </section>
 
-<section class="section">
+<section class="section" id="sec-philo">
   <div class="section-inner">
     <div class="section-label">PHILOSOPHY</div>
     <h2 class="section-title">教学理念</h2>
@@ -63,7 +65,7 @@ footer{border-top:1px solid var(--border);padding:48px 24px 32px;text-align:cent
   </div>
 </section>
 
-<section class="section" style="padding-top:0;">
+<section class="section" id="sec-courses" style="padding-top:0;">
   <div class="section-inner">
     <div class="section-label">COURSES</div>
     <h2 class="section-title">课程体系</h2>
@@ -73,10 +75,10 @@ footer{border-top:1px solid var(--border);padding:48px 24px 32px;text-align:cent
         <h4>青少年 AI 通识（10-15岁）</h4>
         <p>建立对 AI 的基本认知与使用能力，理解 AI 能做什么、不能做什么。</p>
         <ul>
-          <li>AI 是什么：从图灵测试到大模型</li>
-          <li>AI 工具使用：对话、搜索、创作</li>
-          <li>AI 伦理：偏见、隐私与安全</li>
-          <li>AI 项目实践：解决一个真实问题</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>AI 是什么：从图灵测试到大模型</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>AI 工具使用：对话、搜索、创作</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>AI 伦理：偏见、隐私与安全</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>AI 项目实践：解决一个真实问题</li>
         </ul>
       </div>
       <div class="level-card">
@@ -84,10 +86,10 @@ footer{border-top:1px solid var(--border);padding:48px 24px 32px;text-align:cent
         <h4>高中生 AI 思维与方法（15-18岁）</h4>
         <p>从使用者进阶为思考者，理解 AI 背后的逻辑与局限。</p>
         <ul>
-          <li>Prompt 工程：如何与 AI 高效协作</li>
-          <li>AI 识别信息：事实核查与信息素养</li>
-          <li>AI 与学科：用 AI 辅助学习而非替代学习</li>
-          <li>AI 创造：从零搭建一个 AI 应用</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>Prompt 工程：如何与 AI 高效协作</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>AI 识别信息：事实核查与信息素养</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>AI 与学科：用 AI 辅助学习而非替代学习</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>AI 创造：从零搭建一个 AI 应用</li>
         </ul>
       </div>
       <div class="level-card">
@@ -95,34 +97,46 @@ footer{border-top:1px solid var(--border);padding:48px 24px 32px;text-align:cent
         <h4>职场人 AI 技能培训</h4>
         <p>面向各行各业的职场人，把 AI 变成日常工作中的生产力工具。</p>
         <ul>
-          <li>办公场景：文档、数据、演示文稿</li>
-          <li>行业场景：营销、客服、运营、研发</li>
-          <li>AI 工作流搭建：从重复劳动中解放</li>
-          <li>团队 AI 协作：流程与规范</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>办公场景：文档、数据、演示文稿</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>行业场景：营销、客服、运营、研发</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>AI 工作流搭建：从重复劳动中解放</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>团队 AI 协作：流程与规范</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" style="padding-top:0;">
+<section class="section" id="sec-features" style="padding-top:0;">
   <div class="section-inner">
     <div class="section-label">FEATURES</div>
     <h2 class="section-title">教学特色</h2>
     <div class="feature-grid">
-      <div class="feature-card"><div class="icon">🎯</div><h3>场景驱动</h3><p>不做泛泛的"AI 概论"，每个模块从真实场景出发——学生学完当堂就能用。</p></div>
-      <div class="feature-card"><div class="icon">🧩</div><h3>项目制学习</h3><p>每个课程阶段以一个可交付项目为终点，学习过程就是创造过程。</p></div>
-      <div class="feature-card"><div class="icon">🔄</div><h3>持续更新</h3><p>AI 工具迭代极快，课程内容每季度更新，确保教的是最新可用工具。</p></div>
+      <div class="feature-card"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><h3>场景驱动</h3><p>不做泛泛的"AI 概论"，每个模块从真实场景出发——学生学完当堂就能用。</p></div>
+      <div class="feature-card"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-1.705.707 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.402 2.402 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.23 8.77c.24-.24.581-.353.917-.303.515.077.877.528 1.073 1.01a2.5 2.5 0 1 0 3.259-3.259c-.482-.196-.933-.558-1.01-1.073-.05-.336.062-.676.303-.917l1.525-1.525A2.402 2.402 0 0 1 12 1.998c.617 0 1.234.236 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.967 1.02z"/></svg></div><h3>项目制学习</h3><p>每个课程阶段以一个可交付项目为终点，学习过程就是创造过程。</p></div>
+      <div class="feature-card"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M3 21v-5h5"/></svg></div><h3>持续更新</h3><p>AI 工具迭代极快，课程内容每季度更新，确保教的是最新可用工具。</p></div>
     </div>
   </div>
 </section>
 
-<div class="cta">
+<div class="cta" id="cta-section">
   <h2>把 AI 变成你的技能</h2>
   <p>了解课程方案或定制企业内训</p>
   <a href="mailto:1flowShenzhen@gmail.com" class="btn btn-primary">交流咨询</a>
 </div>
 
 <footer><div style="font-size:18px;font-weight:700;margin-bottom:12px;letter-spacing:-0.02em;">镒流智能</div><div style="font-size:13px;color:var(--text-mute);line-height:1.8;">深圳市镒流智能科技有限公司 © 2026 · 深圳市南山区腾讯众创空间<br><a href="mailto:1flowShenzhen@gmail.com">1flowShenzhen@gmail.com</a></div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+gsap.from("#navbar", { y: -64, duration: 0.6, ease: "power2.out" });
+gsap.from(["#hero-title", "#hero-desc"], { y: 30, opacity: 0, duration: 0.8, ease: "power3.out", stagger: 0.15 });
+gsap.from("#sec-philo", { y: 30, opacity: 0, duration: 0.8, ease: "power2.out", scrollTrigger: { trigger: "#sec-philo", start: "top 80%" } });
+gsap.from("#sec-courses .level-card", { y: 40, opacity: 0, duration: 0.6, ease: "power2.out", stagger: 0.1, scrollTrigger: { trigger: "#sec-courses", start: "top 80%" } });
+gsap.from("#sec-features .feature-card", { y: 40, opacity: 0, duration: 0.6, ease: "power2.out", stagger: 0.08, scrollTrigger: { trigger: "#sec-features", start: "top 80%" } });
+gsap.from("#cta-section", { y: 30, opacity: 0, duration: 0.8, ease: "power2.out", scrollTrigger: { trigger: "#cta-section", start: "top 80%" } });
+</script>
 </body>
 </html>

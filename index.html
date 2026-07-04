@@ -186,9 +186,11 @@ nav {
 .biz-icon {
   width: 48px; height: 48px; border-radius: 12px;
   background: var(--bg-3); display: flex; align-items: center; justify-content: center;
-  font-size: 24px; margin-bottom: 28px;
+  margin-bottom: 28px;
   border: 1px solid var(--border);
+  color: var(--accent);
 }
+.biz-icon svg { width: 24px; height: 24px; }
 .biz-card h3 { font-size: 20px; font-weight: 600; margin-bottom: 12px; letter-spacing: -0.01em; }
 .biz-card p { font-size: 14px; color: var(--text-dim); line-height: 1.7; font-weight: 300; }
 .biz-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 24px; }
@@ -254,6 +256,10 @@ footer {
 footer a { color: var(--text-dim); text-decoration: none; }
 footer a:hover { color: var(--accent); }
 
+/* === Arrow icon in card === */
+.arrow-icon { color: var(--text-dim); }
+.arrow-icon svg { width: 36px; height: 36px; }
+
 /* === Responsive === */
 @media (max-width: 768px) {
   .nav-links { display: none; }
@@ -261,10 +267,6 @@ footer a:hover { color: var(--accent); }
   .biz-grid { grid-template-columns: 1fr; }
   .section { padding: 80px 24px; }
 }
-
-/* === Fade in animation === */
-.fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-.fade-in.visible { opacity: 1; transform: translateY(0); }
 </style>
 </head>
 <body>
@@ -272,7 +274,7 @@ footer a:hover { color: var(--accent); }
 <div class="ambient"></div>
 
 <!-- Nav -->
-<nav>
+<nav id="navbar">
   <div class="nav-inner">
     <div class="logo">镒流智能</div>
     <ul class="nav-links">
@@ -287,10 +289,10 @@ footer a:hover { color: var(--accent); }
 <!-- Hero -->
 <section class="hero">
   <div>
-    <div class="hero-badge">深圳市镒流智能科技有限公司</div>
-    <h1>让 AI 成为<br>企业的生产力</h1>
-    <p class="hero-sub">从工作流自动化到内容中台，从儿童营养到反诈防护——我们用 AI 技术解决真实场景中的真实问题。</p>
-    <div class="hero-actions">
+    <div class="hero-badge" id="hero-badge">深圳市镒流智能科技有限公司</div>
+    <h1 id="hero-title">让 AI 成为<br>企业的生产力</h1>
+    <p class="hero-sub" id="hero-sub">从工作流自动化到内容中台，从儿童营养到反诈防护——我们用 AI 技术解决真实场景中的真实问题。</p>
+    <div class="hero-actions" id="hero-actions">
       <a href="#business" class="btn btn-primary">了解我们的业务</a>
       <a href="#contact" class="btn btn-ghost">合作咨询</a>
     </div>
@@ -305,10 +307,10 @@ footer a:hover { color: var(--accent); }
     <h2 class="section-title">五大业务方向</h2>
     <p class="section-desc">覆盖企业提效、内容创作、健康营养、安全防护与教育素养，每个方向都扎根于真实的场景需求。</p>
 
-    <div class="biz-grid">
+    <div class="biz-grid" id="biz-grid">
 
       <a class="biz-card" href="enterprise-ai.html" style="text-decoration:none;color:inherit;display:block;">
-        <div class="biz-icon">⚙️</div>
+        <div class="biz-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
         <h3>企业 AI 工作流</h3>
         <p>基于 RAG 技术构建企业私有知识库，将高频重复性工作流程 AI 化。从诊断到落地，帮助企业找到 AI 转型的第一个突破口。</p>
         <div class="biz-tags">
@@ -319,7 +321,7 @@ footer a:hover { color: var(--accent); }
       </a>
 
       <a class="biz-card" href="ai-media.html" style="text-decoration:none;color:inherit;display:block;">
-        <div class="biz-icon">📡</div>
+        <div class="biz-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h.01"/><path d="M7 20v-4"/><path d="M12 20v-8"/><path d="M17 20V8"/><path d="M22 4v16"/></svg></div>
         <h3>AI 自媒体内容中台</h3>
         <p>覆盖选题发现、脚本生成、数字人视频、多平台分发与数据分析的全链路内容生产平台，帮助创作者大幅提升产出效率。</p>
         <div class="biz-tags">
@@ -330,7 +332,7 @@ footer a:hover { color: var(--accent); }
       </a>
 
       <a class="biz-card" href="ai-nutrition.html" style="text-decoration:none;color:inherit;display:block;">
-        <div class="biz-icon">🥗</div>
+        <div class="biz-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h0a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg></div>
         <h3>AI 儿童精准营养</h3>
         <p>结合计算机视觉与营养知识图谱，通过图像识别分析膳食结构，为儿童提供个性化的营养建议与膳食方案。</p>
         <div class="biz-tags">
@@ -341,7 +343,7 @@ footer a:hover { color: var(--accent); }
       </a>
 
       <a class="biz-card" href="ai-antifraud.html" style="text-decoration:none;color:inherit;display:block;">
-        <div class="biz-icon">🛡️</div>
+        <div class="biz-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <h3>AI 防骗防诈</h3>
         <p>面向 Deepfake 换脸检测与 AI 语音诈骗识别，为社区、学校和公共安全机构提供"技术检测 + 反诈科普"一体化方案。</p>
         <div class="biz-tags">
@@ -352,7 +354,7 @@ footer a:hover { color: var(--accent); }
       </a>
 
       <a class="biz-card" href="ai-education.html" style="text-decoration:none;color:inherit;display:block;">
-        <div class="biz-icon">📚</div>
+        <div class="biz-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
         <h3>AI+ 教育</h3>
         <p>分层级 AI 素养课程体系，面向青少年提供 AI 通识启蒙，面向职场人提供 AI 实操技能培训，场景驱动，学完即用。</p>
         <div class="biz-tags">
@@ -364,7 +366,7 @@ footer a:hover { color: var(--accent); }
 
       <div class="biz-card" style="display:flex; align-items:center; justify-content:center; text-align:center;">
         <div>
-          <div style="font-size:36px; margin-bottom:16px;">→</div>
+          <div class="arrow-icon" style="margin-bottom:16px; display:flex; justify-content:center;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
           <h3 style="margin-bottom:12px;">更多方向探索中</h3>
           <p>我们持续探索 AI 技术在更多垂直场景中的落地可能。<br>如果你有场景需求，欢迎与我们交流。</p>
         </div>
@@ -380,12 +382,12 @@ footer a:hover { color: var(--accent); }
     <div class="section-label">ABOUT</div>
     <h2 class="section-title">技术驱动，场景落地</h2>
     <div class="about-grid">
-      <div class="about-text">
+      <div class="about-text" id="about-text">
         <p>镒流智能成立于 2026 年，总部位于深圳市南山区腾讯众创空间。我们聚焦人工智能技术在垂直场景中的工程化落地——不是做更大的模型，而是让现有的 AI 技术在真实业务中产生价值。</p>
         <p>团队相信，AI 的意义不在于技术的炫酷，而在于它能否切实解决人们在工作和生活中遇到的问题。从企业办公提效到儿童营养健康，从反诈防护到教育素养，我们选择那些真正需要 AI、且 AI 确实能做得更好的场景。</p>
         <p>我们的方法论很简单：先理解场景，再选择技术，最后落地为产品。不做为了 AI 而 AI 的东西。</p>
       </div>
-      <div class="about-visual">
+      <div class="about-visual" id="about-visual">
         <div class="about-visual-text">
           <div class="big">镒流</div>
           <div class="small">YILIU INTELLIGENT</div>
@@ -403,21 +405,21 @@ footer a:hover { color: var(--accent); }
     <h2 class="section-title">技术洞察</h2>
     <p class="section-desc">我们在 AI 落地实践中积累的方法论与技术拆解，分享给同样在探索 AI 应用的人。</p>
 
-    <div class="biz-grid" style="margin-top:48px;">
+    <div class="biz-grid" id="blog-grid" style="margin-top:48px;">
       <a class="biz-card" href="blog/enterprise-ai-workflow.html" style="text-decoration:none;color:inherit;display:block;">
-        <div class="biz-icon">📄</div>
+        <div class="biz-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
         <h3 style="font-size:17px;">企业如何落地 AI 工作流？</h3>
         <p style="font-size:13px;">RAG 技术原理、私有知识库搭建步骤、流程自动化选型逻辑与制造业/电商场景实践。</p>
         <div class="biz-tags"><span class="biz-tag">RAG</span><span class="biz-tag">企业AI</span><span class="biz-tag">知识库</span></div>
       </a>
       <a class="biz-card" href="blog/ai-content-workflow.html" style="text-decoration:none;color:inherit;display:block;">
-        <div class="biz-icon">📄</div>
+        <div class="biz-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
         <h3 style="font-size:17px;">AI 自媒体全链路方法</h3>
         <p style="font-size:13px;">从 AI 选题到多平台分发，拆解 AI 自媒体内容生产的完整链路与核心原则。</p>
         <div class="biz-tags"><span class="biz-tag">AI自媒体</span><span class="biz-tag">数字人</span><span class="biz-tag">内容中台</span></div>
       </a>
       <a class="biz-card" href="blog/deepfake-detection.html" style="text-decoration:none;color:inherit;display:block;">
-        <div class="biz-icon">📄</div>
+        <div class="biz-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
         <h3 style="font-size:17px;">Deepfake 检测技术原理</h3>
         <p style="font-size:13px;">面部边缘伪影、光照一致性、频域特征——AI 换脸检测的三个核心技术路径拆解。</p>
         <div class="biz-tags"><span class="biz-tag">Deepfake</span><span class="biz-tag">AI反诈</span><span class="biz-tag">安全</span></div>
@@ -432,7 +434,7 @@ footer a:hover { color: var(--accent); }
     <div class="section-label">CONTACT</div>
     <h2 class="section-title">与我们一起探索 AI 的可能</h2>
     <p class="section-desc">无论你是寻求 AI 转型的企业，还是有场景需求的合作伙伴，我们都欢迎与你交流。</p>
-    <div class="contact-card">
+    <div class="contact-card" id="contact-card">
       <p>深圳市南山区腾讯众创空间</p>
       <p>深圳市镒流智能科技有限公司</p>
       <a href="mailto:1flowShenzhen@gmail.com" class="email">1flowShenzhen@gmail.com</a>
@@ -450,20 +452,53 @@ footer a:hover { color: var(--accent); }
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
-// Scroll fade-in
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.section, .hero').forEach(el => {
-  el.classList.add('fade-in');
-  observer.observe(el);
+gsap.registerPlugin(ScrollTrigger);
+
+// Nav slide in from top
+gsap.from("#navbar", { y: -64, duration: 0.6, ease: "power2.out" });
+
+// Hero stagger: badge → h1 → sub → actions
+gsap.from(["#hero-badge", "#hero-title", "#hero-sub", "#hero-actions"], {
+  y: 30, opacity: 0, duration: 0.8, ease: "power3.out", stagger: 0.15
+});
+
+// Business cards: ScrollTrigger stagger
+gsap.from("#biz-grid .biz-card", {
+  y: 40, opacity: 0, duration: 0.6, ease: "power2.out", stagger: 0.08,
+  scrollTrigger: { trigger: "#biz-grid", start: "top 80%" }
+});
+
+// About: left from left, right from right
+gsap.from("#about-text", {
+  x: -40, opacity: 0, duration: 0.8, ease: "power2.out",
+  scrollTrigger: { trigger: "#about", start: "top 75%" }
+});
+gsap.from("#about-visual", {
+  x: 40, opacity: 0, duration: 0.8, ease: "power2.out",
+  scrollTrigger: { trigger: "#about", start: "top 75%" }
+});
+
+// Blog cards
+gsap.from("#blog-grid .biz-card", {
+  y: 40, opacity: 0, duration: 0.6, ease: "power2.out", stagger: 0.08,
+  scrollTrigger: { trigger: "#blog-grid", start: "top 80%" }
+});
+
+// Contact fade in from bottom
+gsap.from("#contact-card", {
+  y: 30, opacity: 0, duration: 0.8, ease: "power2.out",
+  scrollTrigger: { trigger: "#contact", start: "top 80%" }
 });
 
 // Nav border on scroll
-window.addEventListener('scroll', () => {
-  const nav = document.querySelector('nav');
-  nav.style.borderColor = window.scrollY > 20 ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.06)';
+ScrollTrigger.create({
+  start: 20,
+  onUpdate: function(self) {
+    document.querySelector("nav").style.borderColor = self.progress > 0 ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.06)';
+  }
 });
 </script>
 

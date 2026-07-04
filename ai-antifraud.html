@@ -32,7 +32,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 24px;background:rg
 .section-title{font-size:clamp(24px,3.5vw,36px);font-weight:700;letter-spacing:-0.02em;margin-bottom:32px}
 .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--border);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);margin-top:48px}
 .feature-card{background:var(--bg);padding:40px 32px;transition:background 0.3s}.feature-card:hover{background:var(--bg-2)}
-.feature-card .icon{font-size:28px;margin-bottom:16px}.feature-card h3{font-size:18px;font-weight:600;margin-bottom:10px;color:var(--accent)}.feature-card p{font-size:14px;color:var(--text-dim);line-height:1.7;font-weight:300}
+.feature-card .icon{width:28px;height:28px;margin-bottom:16px;color:var(--accent);display:flex;align-items:center;justify-content:center}.feature-card .icon svg{width:28px;height:28px}
+.feature-card h3{font-size:18px;font-weight:600;margin-bottom:10px;color:var(--accent)}.feature-card p{font-size:14px;color:var(--text-dim);line-height:1.7;font-weight:300}
 .threat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:48px}
 .threat-card{background:var(--bg-2);border:1px solid var(--border);border-radius:var(--radius);padding:32px;position:relative;overflow:hidden}
 .threat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--accent)}
@@ -47,14 +48,14 @@ footer{border-top:1px solid var(--border);padding:48px 24px 32px;text-align:cent
 </head>
 <body>
 <div class="ambient"></div>
-<nav><div class="nav-inner"><div class="logo"><a href="/">镒流智能</a></div><ul class="nav-links"><li><a href="/#business">业务</a></li><li><a href="/#about">关于</a></li><li><a href="/#contact">联系</a></li></ul><a href="/#contact" class="nav-cta">联系我们</a></div></nav>
+<nav id="navbar"><div class="nav-inner"><div class="logo"><a href="/">镒流智能</a></div><ul class="nav-links"><li><a href="/#business">业务</a></li><li><a href="/#about">关于</a></li><li><a href="/#contact">联系</a></li></ul><a href="/#contact" class="nav-cta">联系我们</a></div></nav>
 
 <section class="page-hero">
-  <h1>AI 防骗防诈</h1>
-  <p>AI 诈骗越来越真，防诈骗也要用 AI。</p>
+  <h1 id="hero-title">AI 防骗防诈</h1>
+  <p id="hero-desc">AI 诈骗越来越真，防诈骗也要用 AI。</p>
 </section>
 
-<section class="section">
+<section class="section" id="sec-threats">
   <div class="section-inner">
     <div class="section-label">THREATS</div>
     <h2 class="section-title">新型 AI 诈骗威胁</h2>
@@ -67,36 +68,48 @@ footer{border-top:1px solid var(--border);padding:48px 24px 32px;text-align:cent
   </div>
 </section>
 
-<section class="section" style="padding-top:0;">
+<section class="section" id="sec-cap" style="padding-top:0;">
   <div class="section-inner">
     <div class="section-label">CAPABILITIES</div>
     <h2 class="section-title">核心能力</h2>
     <div class="feature-grid">
-      <div class="feature-card"><div class="icon">👁️</div><h3>Deepfake 检测</h3><p>基于深度学习的换脸检测引擎，分析视频帧的面部边缘伪影、光照一致性与频域特征，识别 AI 合成人脸。</p></div>
-      <div class="feature-card"><div class="icon">🎙️</div><h3>语音诈骗识别</h3><p>检测克隆语音中的合成痕迹——频谱异常、情感不自然、过渡不连续等信号。适用于电话录音鉴定。</p></div>
-      <div class="feature-card"><div class="icon">📚</div><h3>反诈科普内容</h3><p>面向不同人群（老人、学生、社区）的反诈教育内容包，配合真实案例与互动测试，提升识别能力。</p></div>
+      <div class="feature-card"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Deepfake 检测</h3><p>基于深度学习的换脸检测引擎，分析视频帧的面部边缘伪影、光照一致性与频域特征，识别 AI 合成人脸。</p></div>
+      <div class="feature-card"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div><h3>语音诈骗识别</h3><p>检测克隆语音中的合成痕迹——频谱异常、情感不自然、过渡不连续等信号。适用于电话录音鉴定。</p></div>
+      <div class="feature-card"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div><h3>反诈科普内容</h3><p>面向不同人群（老人、学生、社区）的反诈教育内容包，配合真实案例与互动测试，提升识别能力。</p></div>
     </div>
   </div>
 </section>
 
-<section class="section" style="padding-top:0;">
+<section class="section" id="sec-for" style="padding-top:0;">
   <div class="section-inner">
     <div class="section-label">FOR</div>
     <h2 class="section-title">服务对象</h2>
     <div class="feature-grid">
-      <div class="feature-card"><div class="icon">🏘️</div><h3>社区</h3><p>面向老年群体的反诈科普讲座与技术检测服务，帮助社区建立 AI 诈骗防线。</p></div>
-      <div class="feature-card"><div class="icon">🎓</div><h3>学校</h3><p>面向学生的 AI 素养与网络安全教育课程，培养识别 AI 诈骗的能力。</p></div>
-      <div class="feature-card"><div class="icon">🚔</div><h3>公共安全机构</h3><p>提供技术检测工具与鉴定支持，辅助反诈工作中 AI 诈骗内容的识别取证。</p></div>
+      <div class="feature-card"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/><path d="M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg></div><h3>社区</h3><p>面向老年群体的反诈科普讲座与技术检测服务，帮助社区建立 AI 诈骗防线。</p></div>
+      <div class="feature-card"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div><h3>学校</h3><p>面向学生的 AI 素养与网络安全教育课程，培养识别 AI 诈骗的能力。</p></div>
+      <div class="feature-card"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>公共安全机构</h3><p>提供技术检测工具与鉴定支持，辅助反诈工作中 AI 诈骗内容的识别取证。</p></div>
     </div>
   </div>
 </section>
 
-<div class="cta">
+<div class="cta" id="cta-section">
   <h2>用 AI 对抗 AI 诈骗</h2>
   <p>了解反诈方案如何落地你的社区或机构</p>
   <a href="mailto:1flowShenzhen@gmail.com" class="btn btn-primary">交流咨询</a>
 </div>
 
 <footer><div style="font-size:18px;font-weight:700;margin-bottom:12px;letter-spacing:-0.02em;">镒流智能</div><div style="font-size:13px;color:var(--text-mute);line-height:1.8;">深圳市镒流智能科技有限公司 © 2026 · 深圳市南山区腾讯众创空间<br><a href="mailto:1flowShenzhen@gmail.com">1flowShenzhen@gmail.com</a></div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+gsap.from("#navbar", { y: -64, duration: 0.6, ease: "power2.out" });
+gsap.from(["#hero-title", "#hero-desc"], { y: 30, opacity: 0, duration: 0.8, ease: "power3.out", stagger: 0.15 });
+gsap.from("#sec-threats .threat-card", { y: 40, opacity: 0, duration: 0.6, ease: "power2.out", stagger: 0.08, scrollTrigger: { trigger: "#sec-threats", start: "top 80%" } });
+gsap.from("#sec-cap .feature-card", { y: 40, opacity: 0, duration: 0.6, ease: "power2.out", stagger: 0.08, scrollTrigger: { trigger: "#sec-cap", start: "top 80%" } });
+gsap.from("#sec-for .feature-card", { y: 40, opacity: 0, duration: 0.6, ease: "power2.out", stagger: 0.08, scrollTrigger: { trigger: "#sec-for", start: "top 80%" } });
+gsap.from("#cta-section", { y: 30, opacity: 0, duration: 0.8, ease: "power2.out", scrollTrigger: { trigger: "#cta-section", start: "top 80%" } });
+</script>
 </body>
 </html>

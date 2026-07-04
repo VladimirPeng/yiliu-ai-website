@@ -41,20 +41,24 @@ nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:0 24px; backg
 .feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1px; background:var(--border); border-radius:var(--radius); overflow:hidden; border:1px solid var(--border); margin-top:48px; }
 .feature-card { background:var(--bg); padding:40px 32px; transition:background 0.3s; }
 .feature-card:hover { background:var(--bg-2); }
-.feature-card .icon { font-size:28px; margin-bottom:16px; }
+.feature-card .icon { width:28px; height:28px; margin-bottom:16px; color:var(--accent); display:flex; align-items:center; justify-content:center; }
+.feature-card .icon svg { width:28px; height:28px; }
 .feature-card h3 { font-size:18px; font-weight:600; margin-bottom:10px; color:var(--accent); }
 .feature-card p { font-size:14px; color:var(--text-dim); line-height:1.7; font-weight:300; }
 
 .flow { display:flex; justify-content:center; gap:0; margin-top:60px; flex-wrap:wrap; }
 .flow-step { background:var(--bg-2); border:1px solid var(--border); padding:24px 28px; text-align:center; min-width:150px; border-radius:var(--radius); }
-.flow-step .icon { font-size:24px; margin-bottom:8px; }
+.flow-step .icon { width:24px; height:24px; margin:0 auto 8px; color:var(--accent); display:flex; align-items:center; justify-content:center; }
+.flow-step .icon svg { width:24px; height:24px; }
 .flow-step h4 { font-size:14px; margin-bottom:4px; }
 .flow-step p { font-size:12px; color:var(--text-mute); }
-.flow-arrow { display:flex; align-items:center; color:var(--text-mute); padding:0 6px; font-size:18px; }
+.flow-arrow { display:flex; align-items:center; color:var(--text-mute); padding:0 6px; }
+.flow-arrow svg { width:20px; height:20px; }
 
 .audience-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin-top:48px; }
 .audience-card { background:var(--bg-2); border:1px solid var(--border); border-radius:var(--radius); padding:32px 20px; text-align:center; }
-.audience-card .emoji { font-size:32px; margin-bottom:12px; }
+.audience-card .emoji { width:32px; height:32px; margin:0 auto 12px; color:var(--accent); display:flex; align-items:center; justify-content:center; }
+.audience-card .emoji svg { width:28px; height:28px; }
 .audience-card h4 { font-size:15px; margin-bottom:6px; }
 .audience-card p { font-size:13px; color:var(--text-mute); }
 
@@ -73,7 +77,7 @@ footer a { color:var(--text-dim); text-decoration:none; }
 <body>
 <div class="ambient"></div>
 
-<nav>
+<nav id="navbar">
   <div class="nav-inner">
     <div class="logo"><a href="/">镒流智能</a></div>
     <ul class="nav-links">
@@ -86,42 +90,42 @@ footer a { color:var(--text-dim); text-decoration:none; }
 </nav>
 
 <section class="page-hero">
-  <h1>AI 自媒体内容中台</h1>
-  <p>从选题到分发，AI 负责重复劳动，你负责创作判断。</p>
+  <h1 id="hero-title">AI 自媒体内容中台</h1>
+  <p id="hero-desc">从选题到分发，AI 负责重复劳动，你负责创作判断。</p>
 </section>
 
-<section class="section">
+<section class="section" id="sec-cap">
   <div class="section-inner">
     <div class="section-label">CAPABILITIES</div>
     <h2 class="section-title">六大核心模块</h2>
     <div class="feature-grid">
       <div class="feature-card">
-        <div class="icon">🔥</div>
+        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
         <h3>AI 选题</h3>
         <p>跨平台热点监控与行业关键词追踪，AI 评分（热度、竞争度、账号匹配度），让选题从"凭感觉"变成"看数据"。</p>
       </div>
       <div class="feature-card">
-        <div class="icon">✍️</div>
+        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
         <h3>AI 脚本</h3>
         <p>一个选题自动生成多平台版本（抖音/小红书/视频号/B站），带入人设标签，自动调整语气与结构。</p>
       </div>
       <div class="feature-card">
-        <div class="icon">🎬</div>
+        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg></div>
         <h3>数字人视频</h3>
         <p>输入脚本自动生成口播视频，支持真人形象克隆。适合信息密集型内容，让日更不再是体力活。</p>
       </div>
       <div class="feature-card">
-        <div class="icon">📤</div>
+        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></div>
         <h3>多平台分发</h3>
         <p>支持多平台一键发布，自动适配各平台格式（标题长度、话题标签、封面尺寸），定时发布。</p>
       </div>
       <div class="feature-card">
-        <div class="icon">👥</div>
+        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <h3>矩阵账号管理</h3>
         <p>多账号防关联技术与统一内容调度，一个面板管理全矩阵账号的排期和发布状态。</p>
       </div>
       <div class="feature-card">
-        <div class="icon">📊</div>
+        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></div>
         <h3>AI 数据分析</h3>
         <p>不只是播放量——AI 分析内容流失点、互动高峰点，与同赛道爆款对比，让优化有数据依据。</p>
       </div>
@@ -129,39 +133,39 @@ footer a { color:var(--text-dim); text-decoration:none; }
   </div>
 </section>
 
-<section class="section" style="padding-top:0;">
+<section class="section" id="sec-flow" style="padding-top:0;">
   <div class="section-inner">
     <div class="section-label">WORKFLOW</div>
     <h2 class="section-title">全链路 SOP</h2>
     <div class="flow">
-      <div class="flow-step"><div class="icon">🔥</div><h4>AI 选题</h4></div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-step"><div class="icon">✍️</div><h4>AI 脚本</h4></div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-step"><div class="icon">🎬</div><h4>数字人/录制</h4></div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-step"><div class="icon">📤</div><h4>一键分发</h4></div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-step"><div class="icon">📊</div><h4>数据分析</h4></div>
+      <div class="flow-step"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div><h4>AI 选题</h4></div>
+      <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      <div class="flow-step"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><h4>AI 脚本</h4></div>
+      <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      <div class="flow-step"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg></div><h4>数字人/录制</h4></div>
+      <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      <div class="flow-step"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></div><h4>一键分发</h4></div>
+      <div class="flow-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      <div class="flow-step"><div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></div><h4>数据分析</h4></div>
     </div>
     <p style="text-align:center; font-size:14px; color:var(--text-mute); margin-top:24px;">AI 做 80%，人做 20% 的关键判断</p>
   </div>
 </section>
 
-<section class="section" style="padding-top:0;">
+<section class="section" id="sec-audience" style="padding-top:0;">
   <div class="section-inner">
     <div class="section-label">FOR</div>
     <h2 class="section-title">适用人群</h2>
     <div class="audience-grid">
-      <div class="audience-card"><div class="emoji">🏢</div><h4>品牌方</h4><p>规模化内容产出，统一管理品牌社媒</p></div>
-      <div class="audience-card"><div class="emoji">🎙️</div><h4>创始人 IP</h4><p>数字人帮你日更，保持 IP 热度</p></div>
-      <div class="audience-card"><div class="emoji">📺</div><h4>MCN 机构</h4><p>矩阵账号统一管理与数据追踪</p></div>
-      <div class="audience-card"><div class="emoji">✏️</div><h4>自媒体个体</h4><p>一个人等于一个团队</p></div>
+      <div class="audience-card"><div class="emoji"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg></div><h4>品牌方</h4><p>规模化内容产出，统一管理品牌社媒</p></div>
+      <div class="audience-card"><div class="emoji"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div><h4>创始人 IP</h4><p>数字人帮你日更，保持 IP 热度</p></div>
+      <div class="audience-card"><div class="emoji"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h4>MCN 机构</h4><p>矩阵账号统一管理与数据追踪</p></div>
+      <div class="audience-card"><div class="emoji"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div><h4>自媒体个体</h4><p>一个人等于一个团队</p></div>
     </div>
   </div>
 </section>
 
-<div class="cta">
+<div class="cta" id="cta-section">
   <h2>让 AI 替你做重复劳动</h2>
   <p>看看你的内容工作流里哪些环节可以 AI 化</p>
   <a href="mailto:1flowShenzhen@gmail.com" class="btn btn-primary">交流咨询</a>
@@ -174,6 +178,44 @@ footer a { color:var(--text-dim); text-decoration:none; }
     <a href="mailto:1flowShenzhen@gmail.com">1flowShenzhen@gmail.com</a>
   </div>
 </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+// Nav slide in
+gsap.from("#navbar", { y: -64, duration: 0.6, ease: "power2.out" });
+
+// Hero: h1 → p stagger
+gsap.from(["#hero-title", "#hero-desc"], {
+  y: 30, opacity: 0, duration: 0.8, ease: "power3.out", stagger: 0.15
+});
+
+// Feature cards stagger
+gsap.from("#sec-cap .feature-card", {
+  y: 40, opacity: 0, duration: 0.6, ease: "power2.out", stagger: 0.08,
+  scrollTrigger: { trigger: "#sec-cap", start: "top 80%" }
+});
+
+// Flow steps
+gsap.from("#sec-flow .flow-step", {
+  y: 30, opacity: 0, duration: 0.5, ease: "power2.out", stagger: 0.08,
+  scrollTrigger: { trigger: "#sec-flow", start: "top 80%" }
+});
+
+// Audience cards
+gsap.from("#sec-audience .audience-card", {
+  y: 30, opacity: 0, duration: 0.5, ease: "power2.out", stagger: 0.08,
+  scrollTrigger: { trigger: "#sec-audience", start: "top 80%" }
+});
+
+// CTA fade in
+gsap.from("#cta-section", {
+  y: 30, opacity: 0, duration: 0.8, ease: "power2.out",
+  scrollTrigger: { trigger: "#cta-section", start: "top 80%" }
+});
+</script>
 
 </body>
 </html>

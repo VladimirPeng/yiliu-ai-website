@@ -59,14 +59,14 @@ footer{border-top:1px solid var(--border);padding:48px 24px 32px;text-align:cent
 </head>
 <body>
 <div class="ambient"></div>
-<nav><div class="nav-inner"><div class="logo"><a href="/">镒流智能</a></div><ul class="nav-links"><li><a href="/#business">业务</a></li><li><a href="/#about">关于</a></li><li><a href="/#contact">联系</a></li></ul><a href="/#contact" class="nav-cta">联系我们</a></div></nav>
+<nav id="navbar"><div class="nav-inner"><div class="logo"><a href="/">镒流智能</a></div><ul class="nav-links"><li><a href="/#business">业务</a></li><li><a href="/#about">关于</a></li><li><a href="/#contact">联系</a></li></ul><a href="/#contact" class="nav-cta">联系我们</a></div></nav>
 
 <article class="article">
-  <div class="article-meta"><span class="tag">技术文章</span><span>2026-07-04</span><span>镒流智能</span></div>
-  <h1>企业如何落地 AI 工作流？RAG 技术原理与实践</h1>
-  <p class="lead">通用大模型不懂你的业务。本文从 RAG 技术原理出发，讲清楚企业私有知识库的搭建逻辑、流程自动化的选型方法，以及制造业和电商场景中的真实落地路径。</p>
+  <div class="article-meta" id="art-meta"><span class="tag">技术文章</span><span>2026-07-04</span><span>镒流智能</span></div>
+  <h1 id="art-title">企业如何落地 AI 工作流？RAG 技术原理与实践</h1>
+  <p class="lead" id="art-lead">通用大模型不懂你的业务。本文从 RAG 技术原理出发，讲清楚企业私有知识库的搭建逻辑、流程自动化的选型方法，以及制造业和电商场景中的真实落地路径。</p>
 
-  <div class="toc">
+  <div class="toc" id="art-toc">
     <h4>目录</h4>
     <ol>
       <li><a href="#why">为什么企业需要 RAG 而非通用大模型</a></li>
@@ -137,5 +137,20 @@ footer{border-top:1px solid var(--border);padding:48px 24px 32px;text-align:cent
 </article>
 
 <footer><div style="font-size:18px;font-weight:700;margin-bottom:12px;letter-spacing:-0.02em;">镒流智能</div><div style="font-size:13px;color:var(--text-mute);line-height:1.8;">深圳市镒流智能科技有限公司 © 2026 · 深圳市南山区腾讯众创空间<br><a href="mailto:1flowShenzhen@gmail.com">1flowShenzhen@gmail.com</a></div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+gsap.from("#navbar", { y: -64, duration: 0.6, ease: "power2.out" });
+gsap.from(["#art-meta", "#art-title", "#art-lead", "#art-toc"], { y: 30, opacity: 0, duration: 0.8, ease: "power3.out", stagger: 0.15 });
+gsap.utils.toArray(".article h2, .article h3, .article p, .article ul").forEach(function(el) {
+  gsap.from(el, { y: 20, opacity: 0, duration: 0.5, ease: "power2.out", scrollTrigger: { trigger: el, start: "top 85%" } });
+});
+gsap.utils.toArray(".article blockquote").forEach(function(el) {
+  gsap.from(el, { x: -40, opacity: 0, duration: 0.7, ease: "power2.out", scrollTrigger: { trigger: el, start: "top 85%" } });
+});
+gsap.from(".article .cta-box", { y: 30, opacity: 0, duration: 0.7, ease: "power2.out", scrollTrigger: { trigger: ".article .cta-box", start: "top 85%" } });
+</script>
 </body>
 </html>
