@@ -3,191 +3,161 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>企业AI工作流解决方案 - RAG知识库 · 制造业AI · 电商AI | 继流智能</title>
-<meta name="description" content="继流智能企业AI工作流方案，基于RAG技术搭建企业私有知识库，覆盖制造业、电商、教育等行业的AI办公自动化，已帮助20+企业实现显著降本增效。">
-<meta name="keywords" content="企业AI工作流,RAG知识库,AI降本增效,制造业AI,电商AI,教育AI,企业私有知识库">
-<link rel="canonical" href="https://www.yiliu.ai/enterprise-ai">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "企业AI工作流解决方案",
-  "provider": {"@type": "Organization","name": "继流智能"},
-  "description": "基于RAG技术为企业搭建私有知识库和AI工作流，覆盖制造业、电商、教育行业",
-  "areaServed": {"@type": "Country","name": "中国"}
-}
-</script>
+<title>企业AI工作流 — 继流智能</title>
+<meta name="description" content="继流智能企业AI工作流方案，基于RAG技术搭建企业私有知识库，覆盖制造业、电商、教育等行业的AI办公自动化。">
+<link rel="canonical" href="https://yiliu.is-a.dev/enterprise-ai">
 
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; color: #1a1a2e; line-height: 1.6; background: #f8f9fa; }
-nav { position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid #e8e8e8; padding: 0 24px; }
-.nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
-.logo { font-size: 22px; font-weight: 700; color: #6c5ce7; }
-.logo a { text-decoration: none; color: inherit; }
-.nav-links { display: flex; gap: 28px; list-style: none; }
-.nav-links a { text-decoration: none; color: #555; font-size: 14px; }
-.nav-links a:hover, .nav-links a.active { color: #6c5ce7; }
-.hero { padding: 140px 24px 80px; text-align: center; background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); color: #fff; }
-.hero h1 { font-size: 42px; font-weight: 800; margin-bottom: 16px; }
-.hero p { font-size: 18px; max-width: 700px; margin: 0 auto; opacity: 0.95; }
-.section { max-width: 1200px; margin: 0 auto; padding: 80px 24px; }
-.section h2 { font-size: 28px; font-weight: 700; margin-bottom: 40px; text-align: center; }
-.industry-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; margin-top: 40px; }
-.industry-card { background: #fff; border-radius: 16px; padding: 36px 28px; box-shadow: 0 4px 24px rgba(0,0,0,0.04); border: 1px solid #f0f0f0; }
-.industry-card h3 { font-size: 20px; margin-bottom: 12px; color: #6c5ce7; }
-.industry-card ul { list-style: none; }
-.industry-card li { font-size: 14px; color: #666; padding: 6px 0; padding-left: 20px; position: relative; }
-.industry-card li::before { content: '▸'; position: absolute; left: 0; color: #6c5ce7; }
-.highlight-box { background: #fff; border-radius: 16px; padding: 40px; box-shadow: 0 4px 24px rgba(0,0,0,0.04); margin-top: 40px; }
-.highlight-box h3 { color: #6c5ce7; margin-bottom: 16px; }
-.highlight-box p { font-size: 14px; color: #666; line-height: 1.8; }
-.faq-list { max-width: 800px; margin: 40px auto 0; }
-.faq-item { background: #fff; border-radius: 12px; margin-bottom: 12px; padding: 24px 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.03); }
-.faq-item h4 { font-size: 16px; color: #6c5ce7; margin-bottom: 8px; }
-.faq-item p { font-size: 14px; color: #666; line-height: 1.7; }
-.cta-section { text-align: center; padding: 80px 24px; background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); color: #fff; margin-top: 40px; }
-.cta-section h2 { font-size: 28px; margin-bottom: 16px; }
-.cta-section p { font-size: 16px; margin-bottom: 32px; opacity: 0.9; }
-.btn { background: #fff; color: #6c5ce7; border: none; padding: 14px 36px; border-radius: 30px; font-size: 16px; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; }
-.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
-footer { background: #1a1a2e; color: #aaa; padding: 48px 24px 28px; text-align: center; font-size: 14px; }
-footer a { color: #a29bfe; text-decoration: none; }
-.breadcrumb { max-width: 1200px; margin: 0 auto; padding: 12px 24px; font-size: 13px; color: #888; }
-.breadcrumb a { color: #6c5ce7; text-decoration: none; }
-@media (max-width:768px) { .hero h1 { font-size: 28px; } .nav-links { display: none; } }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+:root {
+  --bg: #0a0a0f; --bg-2: #12121a; --bg-3: #1a1a26;
+  --text: #e8e8f0; --text-dim: #8888a0; --text-mute: #555568;
+  --accent: #7c5cff; --accent-2: #00d4ff;
+  --border: rgba(255,255,255,0.06); --border-hover: rgba(255,255,255,0.12);
+  --radius: 20px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Inter',-apple-system,'PingFang SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; }
+.ambient { position:fixed; inset:0; z-index:0; pointer-events:none; background:radial-gradient(ellipse 800px 600px at 20% 0%,rgba(124,92,255,0.12),transparent 60%),radial-gradient(ellipse 600px 500px at 80% 30%,rgba(0,212,255,0.06),transparent 60%); }
+nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:0 24px; background:rgba(10,10,15,0.7); backdrop-filter:blur(20px) saturate(180%); border-bottom:1px solid var(--border); }
+.nav-inner { max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; height:64px; }
+.logo { font-size:18px; font-weight:700; letter-spacing:-0.02em; background:linear-gradient(135deg,#fff,#a0a0c0); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+.logo a { text-decoration:none; color:inherit; }
+.nav-links { display:flex; gap:32px; list-style:none; }
+.nav-links a { text-decoration:none; color:var(--text-dim); font-size:14px; }
+.nav-links a:hover { color:var(--text); }
+.nav-cta { background:var(--accent); color:#fff; padding:9px 22px; border-radius:100px; font-size:13px; font-weight:500; text-decoration:none; }
+.nav-cta:hover { background:#6b4dff; }
+
+.page-hero { position:relative; z-index:1; padding:160px 24px 80px; text-align:center; }
+.page-hero h1 { font-size:clamp(32px,5vw,52px); font-weight:700; letter-spacing:-0.03em; margin-bottom:20px; background:linear-gradient(180deg,#fff,#a0a0b8); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+.page-hero p { font-size:18px; color:var(--text-dim); font-weight:300; max-width:580px; margin:0 auto; }
+
+.section { position:relative; z-index:1; padding:80px 24px; }
+.section-inner { max-width:1000px; margin:0 auto; }
+.section-label { font-size:13px; color:var(--accent); font-weight:500; letter-spacing:2px; text-transform:uppercase; margin-bottom:16px; }
+.section-title { font-size:clamp(24px,3.5vw,36px); font-weight:700; letter-spacing:-0.02em; margin-bottom:32px; }
+
+.feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1px; background:var(--border); border-radius:var(--radius); overflow:hidden; border:1px solid var(--border); margin-top:48px; }
+.feature-card { background:var(--bg); padding:40px 32px; transition:background 0.3s; }
+.feature-card:hover { background:var(--bg-2); }
+.feature-card h3 { font-size:18px; font-weight:600; margin-bottom:10px; color:var(--accent); }
+.feature-card p { font-size:14px; color:var(--text-dim); line-height:1.7; font-weight:300; }
+
+.flow { display:flex; justify-content:center; gap:0; margin-top:60px; flex-wrap:wrap; }
+.flow-step { background:var(--bg-2); border:1px solid var(--border); padding:24px 32px; text-align:center; min-width:160px; border-radius:var(--radius); }
+.flow-step .num { font-size:14px; color:var(--accent); font-weight:600; margin-bottom:8px; }
+.flow-step h4 { font-size:15px; margin-bottom:6px; }
+.flow-step p { font-size:12px; color:var(--text-mute); }
+.flow-arrow { display:flex; align-items:center; color:var(--text-mute); padding:0 8px; }
+
+.cta { text-align:center; padding:100px 24px; position:relative; z-index:1; }
+.cta h2 { font-size:32px; font-weight:700; margin-bottom:16px; }
+.cta p { font-size:16px; color:var(--text-dim); margin-bottom:32px; }
+.btn { display:inline-flex; align-items:center; gap:8px; padding:14px 32px; border-radius:100px; font-size:15px; font-weight:500; text-decoration:none; transition:all 0.25s; }
+.btn-primary { background:var(--accent); color:#fff; }
+.btn-primary:hover { background:#6b4dff; box-shadow:0 8px 40px rgba(124,92,255,0.15); transform:translateY(-2px); }
+
+footer { border-top:1px solid var(--border); padding:48px 24px 32px; text-align:center; }
+footer a { color:var(--text-dim); text-decoration:none; }
+@media(max-width:768px) { .nav-links{display:none;} .flow{flex-direction:column;} .flow-arrow{transform:rotate(90deg); padding:8px 0;} }
 </style>
 </head>
 <body>
+<div class="ambient"></div>
 
 <nav>
   <div class="nav-inner">
     <div class="logo"><a href="/">继流智能</a></div>
     <ul class="nav-links">
       <li><a href="/#business">业务</a></li>
-      <li><a href="/#cases">案例</a></li>
-      <li><a href="enterprise-ai.html" class="active">企业AI</a></li>
-      <li><a href="ai-media.html">AI自媒体</a></li>
-      <li><a href="/#faq">FAQ</a></li>
+      <li><a href="/#about">关于</a></li>
+      <li><a href="/#contact">联系</a></li>
     </ul>
+    <a href="/#contact" class="nav-cta">联系我们</a>
   </div>
 </nav>
 
-<div class="breadcrumb"><a href="/">首页</a> &gt; 企业AI工作流</div>
-
-<section class="hero">
-  <h1>企业AI工作流：从一个场景开始</h1>
-  <p>不卖大模型，不卖概念。从你公司最耗时的重复性工作入手，用AI让它自动化。</p>
+<section class="page-hero">
+  <h1>企业 AI 工作流</h1>
+  <p>不选大模型，选工作流。从企业最耗时的重复性场景入手，用 AI 一步步解放生产力。</p>
 </section>
 
 <section class="section">
-  <h2>覆盖三大行业场景</h2>
-  <div class="industry-grid">
+  <div class="section-inner">
+    <div class="section-label">CORE</div>
+    <h2 class="section-title">核心能力</h2>
+    <p style="color:var(--text-dim); font-size:16px; font-weight:300; max-width:680px;">通用大模型不懂你的业务。RAG（检索增强生成）将企业私有文档向量化存储，让 AI 基于你公司的真实知识作答——数据不出企业，回答可溯源。</p>
 
-    <div class="industry-card">
-      <h3>🏭 制造业</h3>
-      <ul>
-        <li>质检/巡检报告自动生成</li>
-        <li>设备维保知识库（故障代码→维修方案）</li>
-        <li>生产排产AI优化建议</li>
-        <li>供应链文档智能处理</li>
-      </ul>
-    </div>
-
-    <div class="industry-card">
-      <h3>🛒 电商</h3>
-      <ul>
-        <li>客服自动应答知识库</li>
-        <li>商品描述/主图文案批量生成</li>
-        <li>用户评论情感分析→产品改进建议</li>
-        <li>退换货流程自动化</li>
-      </ul>
-    </div>
-
-    <div class="industry-card">
-      <h3>📚 教育</h3>
-      <ul>
-        <li>学员FAQ智能应答</li>
-        <li>课程推荐引擎</li>
-        <li>学员档案智能管理</li>
-        <li>教务流程自动化</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="highlight-box" style="margin-top:48px;">
-    <h3>核心能力：RAG企业私有知识库</h3>
-    <p>通用大模型不懂你的业务。RAG（检索增强生成）把企业文档——SOP手册、历史方案、产品资料、制度文件——向量化存储到私有知识库。员工提问时，AI先从知识库检索相关文档，再生成基于真实知识的回答。<br><br>
-    关键优势：<strong>数据不出企业</strong>（支持本地部署）、<strong>回答可溯源</strong>（每个答案可追溯到原始文档）、<strong>持续进化</strong>（知识库随业务增长而更新）。</p>
-  </div>
-</section>
-
-<section class="section" style="background:#fff; max-width:100%; padding:80px 24px;">
-<div style="max-width:1200px; margin:0 auto;">
-  <h2>落地五步法</h2>
-  <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:16px; margin-top:40px;">
-    <div style="text-align:center;padding:24px 12px;background:#f8f9fa;border-radius:16px;">
-      <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#6c5ce7,#a29bfe);color:#fff;font-size:20px;font-weight:700;line-height:48px;margin:0 auto 16px;">1</div>
-      <h4 style="font-size:15px;margin-bottom:6px;">诊断</h4>
-      <p style="font-size:12px;color:#888;">找到最耗时的重复性工作</p>
-    </div>
-    <div style="text-align:center;padding:24px 12px;background:#f8f9fa;border-radius:16px;">
-      <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#6c5ce7,#a29bfe);color:#fff;font-size:20px;font-weight:700;line-height:48px;margin:0 auto 16px;">2</div>
-      <h4 style="font-size:15px;margin-bottom:6px;">方案</h4>
-      <p style="font-size:12px;color:#888;">定制技术方案和部署方式</p>
-    </div>
-    <div style="text-align:center;padding:24px 12px;background:#f8f9fa;border-radius:16px;">
-      <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#6c5ce7,#a29bfe);color:#fff;font-size:20px;font-weight:700;line-height:48px;margin:0 auto 16px;">3</div>
-      <h4 style="font-size:15px;margin-bottom:6px;">试点</h4>
-      <p style="font-size:12px;color:#888;">单场景2-6周快速上线</p>
-    </div>
-    <div style="text-align:center;padding:24px 12px;background:#f8f9fa;border-radius:16px;">
-      <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#6c5ce7,#a29bfe);color:#fff;font-size:20px;font-weight:700;line-height:48px;margin:0 auto 16px;">4</div>
-      <h4 style="font-size:15px;margin-bottom:6px;">推广</h4>
-      <p style="font-size:12px;color:#888;">试点成功后扩展至其他场景</p>
-    </div>
-    <div style="text-align:center;padding:24px 12px;background:#f8f9fa;border-radius:16px;">
-      <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#6c5ce7,#a29bfe);color:#fff;font-size:20px;font-weight:700;line-height:48px;margin:0 auto 16px;">5</div>
-      <h4 style="font-size:15px;margin-bottom:6px;">优化</h4>
-      <p style="font-size:12px;color:#888;">数据驱动持续迭代</p>
-    </div>
-  </div>
-</div>
-</section>
-
-<section class="section">
-  <h2>常见问题</h2>
-  <div class="faq-list">
-    <div class="faq-item">
-      <h4>企业搭建AI工作流需要多长时间？</h4>
-      <p>根据企业规模和需求复杂度，从诊断到首个场景上线通常需要2-6周。采用"先试点后推广"策略，让企业在最短时间内看到效果，再决定是否扩展。</p>
-    </div>
-    <div class="faq-item">
-      <h4>RAG知识库怎么保证数据安全？</h4>
-      <p>支持私有化部署，企业数据存储在自有服务器，不经过第三方云端。知识库访问权限可与企业现有OA/ERP系统打通。</p>
-    </div>
-    <div class="faq-item">
-      <h4>中小企业能用AI工作流吗？投入大吗？</h4>
-      <p>能。继流智能专门为中小企业设计了轻量化方案，从单个高频场景切入。不需要大额预算，不需要AI技术团队。我们的理念是：一个场景跑通了，团队对AI的信心就有了，后面的推进就顺了。</p>
-    </div>
-    <div class="faq-item">
-      <h4>和直接接入ChatGPT/文心一言API有什么区别？</h4>
-      <p>通用大模型不了解你的业务（产品、流程、客户），只能给出泛泛的回答。RAG私有知识库让AI基于你公司的真实文档作答，数据安全可控，回答可溯源。这是"通用AI"和"懂你业务的AI"的本质区别。</p>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>RAG 私有知识库</h3>
+        <p>将企业制度、SOP、历史方案、产品资料向量化入库。员工提问，AI 先检索相关文档再生成回答。支持本地部署，数据安全可控。</p>
+      </div>
+      <div class="feature-card">
+        <h3>流程自动化</h3>
+        <p>识别企业高频重复性工作（报告生成、文档处理、客服应答），用 AI 工作流替代人工操作，释放团队精力到更有价值的事上。</p>
+      </div>
+      <div class="feature-card">
+        <h3>场景化落地</h3>
+        <p>不是一个平台解决所有问题，而是从单一场景切入，跑通一个再扩展下一个。先让一个环节见效，再谈全域 AI 化。</p>
+      </div>
     </div>
   </div>
 </section>
 
-<div class="cta-section">
-  <h2>让AI从概念变成你的生产力</h2>
-  <p>预约免费诊断：我们帮你找到第一个值得AI化的场景</p>
-  <a href="mailto:contact@yiliu.ai" class="btn">预约免费诊断</a>
+<section class="section" style="padding-top:0;">
+  <div class="section-inner">
+    <div class="section-label">SCENES</div>
+    <h2 class="section-title">覆盖场景</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>🏭 制造业</h3>
+        <p>质检报告自动生成 · 设备维保知识库 · 生产排产建议 · 供应链文档处理</p>
+      </div>
+      <div class="feature-card">
+        <h3>🛒 电商</h3>
+        <p>客服自动应答 · 商品文案批量生成 · 评论情感分析 · 退换货流程自动化</p>
+      </div>
+      <div class="feature-card">
+        <h3>📚 教育</h3>
+        <p>学员 FAQ 智能应答 · 课程推荐引擎 · 教务流程自动化 · 学员档案管理</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="section-inner">
+    <div class="section-label">METHOD</div>
+    <h2 class="section-title">落地五步法</h2>
+    <div class="flow">
+      <div class="flow-step"><div class="num">01</div><h4>诊断</h4><p>找到最耗时的重复性工作</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="num">02</div><h4>方案</h4><p>定制技术方案和部署方式</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="num">03</div><h4>试点</h4><p>单场景快速上线验证</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="num">04</div><h4>推广</h4><p>试点成功后扩展至更多场景</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="num">05</div><h4>优化</h4><p>数据驱动持续迭代</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <h2>从第一个工作流开始</h2>
+  <p>告诉我们你的业务痛点，我们帮你找到 AI 化的切入点</p>
+  <a href="mailto:1flowShenzhen@gmail.com" class="btn btn-primary">预约交流</a>
 </div>
 
 <footer>
-  <div style="font-size:20px;font-weight:700;color:#a29bfe;margin-bottom:12px;">继流智能</div>
-  <p>深圳市镒流智能科技有限公司 © 2026 | 深圳市南山区腾讯众创空间</p>
-  <p style="margin-top:8px;"><a href="mailto:contact@yiliu.ai">contact@yiliu.ai</a></p>
+  <div style="font-size:18px; font-weight:700; margin-bottom:12px; letter-spacing:-0.02em;">继流智能</div>
+  <div style="font-size:13px; color:var(--text-mute); line-height:1.8;">
+    深圳市镒流智能科技有限公司 © 2026 · 深圳市南山区腾讯众创空间<br>
+    <a href="mailto:1flowShenzhen@gmail.com">1flowShenzhen@gmail.com</a>
+  </div>
 </footer>
 
 </body>

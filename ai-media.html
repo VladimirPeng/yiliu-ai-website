@@ -3,208 +3,176 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI自媒体内容中台 - AIGC脚本 · 数字人视频 · 多平台分发 | 继流智能</title>
-<meta name="description" content="继流智能AI自媒体内容中台，覆盖AI选题→脚本生成→数字人视频→多平台分发→数据分析全链路。AI辅助+人工润色，把内容生产效率提升10倍。">
-<meta name="keywords" content="AI自媒体,AI内容中台,AIGC内容生产,数字人视频,AI脚本生成,多平台分发,矩阵账号管理,AI选题">
-<link rel="canonical" href="https://www.yiliu.ai/ai-media">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "继流智能AI自媒体内容中台",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Web",
-  "description": "AI驱动的自媒体内容全链路管理平台，覆盖选题、脚本、制作、分发、分析",
-  "provider": {"@type": "Organization","name": "继流智能"}
-}
-</script>
+<title>AI自媒体内容中台 — 继流智能</title>
+<meta name="description" content="继流智能AI自媒体内容中台，覆盖选题发现、脚本生成、数字人视频、多平台分发与数据分析全链路。">
+<link rel="canonical" href="https://yiliu.is-a.dev/ai-media">
 
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; color: #1a1a2e; line-height: 1.6; background: #f8f9fa; }
-nav { position: fixed; top: 0; width: 100%; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid #e8e8e8; padding: 0 24px; }
-.nav-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
-.logo { font-size: 22px; font-weight: 700; color: #6c5ce7; }
-.logo a { text-decoration: none; color: inherit; }
-.nav-links { display: flex; gap: 28px; list-style: none; }
-.nav-links a { text-decoration: none; color: #555; font-size: 14px; }
-.nav-links a:hover, .nav-links a.active { color: #6c5ce7; }
-.hero { padding: 140px 24px 80px; text-align: center; background: linear-gradient(135deg, #00b894 0%, #55efc4 100%); color: #fff; }
-.hero h1 { font-size: 42px; font-weight: 800; margin-bottom: 16px; }
-.hero p { font-size: 18px; max-width: 700px; margin: 0 auto; opacity: 0.95; }
-.section { max-width: 1200px; margin: 0 auto; padding: 80px 24px; }
-.section h2 { font-size: 28px; font-weight: 700; margin-bottom: 40px; text-align: center; }
-.feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; margin-top: 40px; }
-.feature-card { background: #fff; border-radius: 16px; padding: 36px 28px; box-shadow: 0 4px 24px rgba(0,0,0,0.04); border: 1px solid #f0f0f0; }
-.feature-card .icon { font-size: 36px; margin-bottom: 12px; }
-.feature-card h3 { font-size: 20px; margin-bottom: 10px; color: #00b894; }
-.feature-card p { font-size: 14px; color: #666; line-height: 1.7; }
-.sop-flow { display: flex; justify-content: center; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 40px; }
-.sop-step { background: linear-gradient(135deg, #00b894, #55efc4); color: #fff; padding: 20px 28px; border-radius: 16px; text-align: center; min-width: 140px; font-weight: 600; font-size: 15px; }
-.sop-arrow { font-size: 24px; color: #00b894; }
-.audience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 40px; }
-.audience-card { background: #fff; border-radius: 16px; padding: 28px; text-align: center; box-shadow: 0 4px 24px rgba(0,0,0,0.04); }
-.audience-card .emoji { font-size: 40px; margin-bottom: 12px; }
-.audience-card h4 { font-size: 17px; margin-bottom: 8px; }
-.audience-card p { font-size: 13px; color: #888; }
-.faq-list { max-width: 800px; margin: 40px auto 0; }
-.faq-item { background: #fff; border-radius: 12px; margin-bottom: 12px; padding: 24px 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.03); }
-.faq-item h4 { font-size: 16px; color: #00b894; margin-bottom: 8px; }
-.faq-item p { font-size: 14px; color: #666; line-height: 1.7; }
-.cta-section { text-align: center; padding: 80px 24px; background: linear-gradient(135deg, #00b894 0%, #55efc4 100%); color: #fff; margin-top: 40px; }
-.cta-section h2 { font-size: 28px; margin-bottom: 16px; }
-.cta-section p { font-size: 16px; margin-bottom: 32px; opacity: 0.9; }
-.btn { background: #fff; color: #00b894; border: none; padding: 14px 36px; border-radius: 30px; font-size: 16px; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; }
-.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
-footer { background: #1a1a2e; color: #aaa; padding: 48px 24px 28px; text-align: center; font-size: 14px; }
-footer a { color: #a29bfe; text-decoration: none; }
-.breadcrumb { max-width: 1200px; margin: 0 auto; padding: 12px 24px; font-size: 13px; color: #888; }
-.breadcrumb a { color: #00b894; text-decoration: none; }
-@media (max-width:768px) { .hero h1 { font-size: 28px; } .nav-links { display: none; } .sop-flow { flex-direction: column; } .sop-arrow { transform: rotate(90deg); } }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+:root {
+  --bg: #0a0a0f; --bg-2: #12121a; --bg-3: #1a1a26;
+  --text: #e8e8f0; --text-dim: #8888a0; --text-mute: #555568;
+  --accent: #00d4ff; --accent-glow: rgba(0, 212, 255, 0.15);
+  --border: rgba(255,255,255,0.06); --border-hover: rgba(255,255,255,0.12);
+  --radius: 20px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Inter',-apple-system,'PingFang SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; }
+.ambient { position:fixed; inset:0; z-index:0; pointer-events:none; background:radial-gradient(ellipse 800px 600px at 20% 0%,rgba(0,212,255,0.10),transparent 60%),radial-gradient(ellipse 600px 500px at 80% 30%,rgba(124,92,255,0.06),transparent 60%); }
+nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:0 24px; background:rgba(10,10,15,0.7); backdrop-filter:blur(20px) saturate(180%); border-bottom:1px solid var(--border); }
+.nav-inner { max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; height:64px; }
+.logo { font-size:18px; font-weight:700; letter-spacing:-0.02em; background:linear-gradient(135deg,#fff,#a0a0c0); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+.logo a { text-decoration:none; color:inherit; }
+.nav-links { display:flex; gap:32px; list-style:none; }
+.nav-links a { text-decoration:none; color:var(--text-dim); font-size:14px; }
+.nav-links a:hover { color:var(--text); }
+.nav-cta { background:var(--accent); color:#000; padding:9px 22px; border-radius:100px; font-size:13px; font-weight:600; text-decoration:none; }
+
+.page-hero { position:relative; z-index:1; padding:160px 24px 80px; text-align:center; }
+.page-hero h1 { font-size:clamp(32px,5vw,52px); font-weight:700; letter-spacing:-0.03em; margin-bottom:20px; background:linear-gradient(180deg,#fff,#a0a0b8); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+.page-hero p { font-size:18px; color:var(--text-dim); font-weight:300; max-width:580px; margin:0 auto; }
+
+.section { position:relative; z-index:1; padding:80px 24px; }
+.section-inner { max-width:1000px; margin:0 auto; }
+.section-label { font-size:13px; color:var(--accent); font-weight:500; letter-spacing:2px; text-transform:uppercase; margin-bottom:16px; }
+.section-title { font-size:clamp(24px,3.5vw,36px); font-weight:700; letter-spacing:-0.02em; margin-bottom:32px; }
+
+.feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1px; background:var(--border); border-radius:var(--radius); overflow:hidden; border:1px solid var(--border); margin-top:48px; }
+.feature-card { background:var(--bg); padding:40px 32px; transition:background 0.3s; }
+.feature-card:hover { background:var(--bg-2); }
+.feature-card .icon { font-size:28px; margin-bottom:16px; }
+.feature-card h3 { font-size:18px; font-weight:600; margin-bottom:10px; color:var(--accent); }
+.feature-card p { font-size:14px; color:var(--text-dim); line-height:1.7; font-weight:300; }
+
+.flow { display:flex; justify-content:center; gap:0; margin-top:60px; flex-wrap:wrap; }
+.flow-step { background:var(--bg-2); border:1px solid var(--border); padding:24px 28px; text-align:center; min-width:150px; border-radius:var(--radius); }
+.flow-step .icon { font-size:24px; margin-bottom:8px; }
+.flow-step h4 { font-size:14px; margin-bottom:4px; }
+.flow-step p { font-size:12px; color:var(--text-mute); }
+.flow-arrow { display:flex; align-items:center; color:var(--text-mute); padding:0 6px; font-size:18px; }
+
+.audience-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin-top:48px; }
+.audience-card { background:var(--bg-2); border:1px solid var(--border); border-radius:var(--radius); padding:32px 20px; text-align:center; }
+.audience-card .emoji { font-size:32px; margin-bottom:12px; }
+.audience-card h4 { font-size:15px; margin-bottom:6px; }
+.audience-card p { font-size:13px; color:var(--text-mute); }
+
+.cta { text-align:center; padding:100px 24px; position:relative; z-index:1; }
+.cta h2 { font-size:32px; font-weight:700; margin-bottom:16px; }
+.cta p { font-size:16px; color:var(--text-dim); margin-bottom:32px; }
+.btn { display:inline-flex; align-items:center; gap:8px; padding:14px 32px; border-radius:100px; font-size:15px; font-weight:500; text-decoration:none; transition:all 0.25s; }
+.btn-primary { background:var(--accent); color:#000; }
+.btn-primary:hover { box-shadow:0 8px 40px var(--accent-glow); transform:translateY(-2px); }
+
+footer { border-top:1px solid var(--border); padding:48px 24px 32px; text-align:center; }
+footer a { color:var(--text-dim); text-decoration:none; }
+@media(max-width:768px) { .nav-links{display:none;} .flow{flex-direction:column;} .flow-arrow{transform:rotate(90deg); padding:8px 0;} }
 </style>
 </head>
 <body>
+<div class="ambient"></div>
 
 <nav>
   <div class="nav-inner">
     <div class="logo"><a href="/">继流智能</a></div>
     <ul class="nav-links">
       <li><a href="/#business">业务</a></li>
-      <li><a href="enterprise-ai.html">企业AI</a></li>
-      <li><a href="ai-media.html" class="active">AI自媒体</a></li>
-      <li><a href="/#cases">案例</a></li>
-      <li><a href="/#faq">FAQ</a></li>
+      <li><a href="/#about">关于</a></li>
+      <li><a href="/#contact">联系</a></li>
     </ul>
+    <a href="/#contact" class="nav-cta">联系我们</a>
   </div>
 </nav>
 
-<div class="breadcrumb"><a href="/">首页</a> &gt; AI自媒体内容中台</div>
-
-<section class="hero">
-  <h1>AI自媒体内容中台：一个人也能日更三平台</h1>
-  <p>AI负责重复劳动（选题→脚本→数字人→分发），你负责创作判断。效率提升10倍，不是口号。</p>
+<section class="page-hero">
+  <h1>AI 自媒体内容中台</h1>
+  <p>从选题到分发，AI 负责重复劳动，你负责创作判断。</p>
 </section>
 
 <section class="section">
-  <h2>六大核心模块</h2>
-  <div class="feature-grid">
-
-    <div class="feature-card">
-      <div class="icon">🔥</div>
-      <h3>AI爆款选题</h3>
-      <p>跨平台热点监控（抖音/小红书/B站/视频号）+ 行业关键词追踪 + AI评分（热度分+竞争度+账号定位匹配度），让选题从"凭感觉"变成"看数据"。</p>
-    </div>
-
-    <div class="feature-card">
-      <div class="icon">✍️</div>
-      <h3>AI脚本生成</h3>
-      <p>一个选题自动生成多平台版本（抖音快节奏/小红书种草风/视频号深度口播/B站知识区）。带入人设标签，自动调整语气和结构。黄金3秒钩子+分段论点+互动引导。</p>
-    </div>
-
-    <div class="feature-card">
-      <div class="icon">🎬</div>
-      <h3>数字人视频</h3>
-      <p>输入脚本→自动生成口播视频。支持真人形象克隆，多形象可选。适合新闻解读、知识科普、产品讲解等信息密集型内容，让日更不再是体力活。</p>
-    </div>
-
-    <div class="feature-card">
-      <div class="icon">📤</div>
-      <h3>多平台一键分发</h3>
-      <p>支持30+内容平台，自动适配各平台格式（标题长度、话题标签、封面尺寸）。定时发布，一次批处理本周所有内容。</p>
-    </div>
-
-    <div class="feature-card">
-      <div class="icon">👥</div>
-      <h3>矩阵账号管理</h3>
-      <p>多账号防关联技术 + 统一内容调度 + 数据看板。一个面板管理全矩阵账号的内容排期和发布状态。</p>
-    </div>
-
-    <div class="feature-card">
-      <div class="icon">📊</div>
-      <h3>AI数据分析</h3>
-      <p>不只是播放量/点赞数——AI告诉你哪3秒观众流失最多、哪句话引发互动高峰、和同赛道爆款比你差在哪。让优化有数据依据。</p>
-    </div>
-
-  </div>
-</section>
-
-<section class="section" style="background:#fff; max-width:100%; padding:80px 24px;">
-<div style="max-width:1200px; margin:0 auto;">
-  <h2>全链路SOP：从选题到分析</h2>
-  <div class="sop-flow">
-    <div class="sop-step">🔥<br>AI选题<br><small>5分钟</small></div>
-    <div class="sop-arrow">→</div>
-    <div class="sop-step">✍️<br>AI脚本<br><small>3分钟</small></div>
-    <div class="sop-arrow">→</div>
-    <div class="sop-step">🎬<br>数字人/录制<br><small>15分钟</small></div>
-    <div class="sop-arrow">→</div>
-    <div class="sop-step">📤<br>一键分发<br><small>2分钟</small></div>
-    <div class="sop-arrow">→</div>
-    <div class="sop-step">📊<br>数据分析<br><small>自动</small></div>
-  </div>
-  <p style="text-align:center; font-size:14px; color:#888; margin-top:24px;">全流程约30分钟（含15分钟人工润色）= 传统方式的1/10</p>
-</div>
-</section>
-
-<section class="section">
-  <h2>谁在用</h2>
-  <div class="audience-grid">
-    <div class="audience-card">
-      <div class="emoji">🏢</div>
-      <h4>品牌方</h4>
-      <p>需要规模化内容产出，一个中台管理全品牌社媒账号</p>
-    </div>
-    <div class="audience-card">
-      <div class="emoji">🎙️</div>
-      <h4>创始人IP</h4>
-      <p>没时间出镜？数字人克隆帮你日更，保持IP热度</p>
-    </div>
-    <div class="audience-card">
-      <div class="emoji">📺</div>
-      <h4>MCN机构</h4>
-      <p>矩阵账号统一管理，内容排期+数据追踪一站搞定</p>
-    </div>
-    <div class="audience-card">
-      <div class="emoji">✏️</div>
-      <h4>自媒体个体</h4>
-      <p>一个人=一个团队，把时间花在创作判断上，不是复制粘贴</p>
+  <div class="section-inner">
+    <div class="section-label">CAPABILITIES</div>
+    <h2 class="section-title">六大核心模块</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="icon">🔥</div>
+        <h3>AI 选题</h3>
+        <p>跨平台热点监控与行业关键词追踪，AI 评分（热度、竞争度、账号匹配度），让选题从"凭感觉"变成"看数据"。</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">✍️</div>
+        <h3>AI 脚本</h3>
+        <p>一个选题自动生成多平台版本（抖音/小红书/视频号/B站），带入人设标签，自动调整语气与结构。</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🎬</div>
+        <h3>数字人视频</h3>
+        <p>输入脚本自动生成口播视频，支持真人形象克隆。适合信息密集型内容，让日更不再是体力活。</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📤</div>
+        <h3>多平台分发</h3>
+        <p>支持多平台一键发布，自动适配各平台格式（标题长度、话题标签、封面尺寸），定时发布。</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">👥</div>
+        <h3>矩阵账号管理</h3>
+        <p>多账号防关联技术与统一内容调度，一个面板管理全矩阵账号的排期和发布状态。</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📊</div>
+        <h3>AI 数据分析</h3>
+        <p>不只是播放量——AI 分析内容流失点、互动高峰点，与同赛道爆款对比，让优化有数据依据。</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section">
-  <h2>常见问题</h2>
-  <div class="faq-list">
-    <div class="faq-item">
-      <h4>AI自媒体中台和传统剪辑工具有什么区别？</h4>
-      <p>传统工具只解决"怎么做"（剪辑/排版），继流智能中台解决"做什么→怎么做→怎么发→怎么分析"全链路。AI选题告诉发什么能火，AI脚本帮写，数字人帮拍，自动分发帮管。</p>
+<section class="section" style="padding-top:0;">
+  <div class="section-inner">
+    <div class="section-label">WORKFLOW</div>
+    <h2 class="section-title">全链路 SOP</h2>
+    <div class="flow">
+      <div class="flow-step"><div class="icon">🔥</div><h4>AI 选题</h4></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="icon">✍️</div><h4>AI 脚本</h4></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="icon">🎬</div><h4>数字人/录制</h4></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="icon">📤</div><h4>一键分发</h4></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="icon">📊</div><h4>数据分析</h4></div>
     </div>
-    <div class="faq-item">
-      <h4>AI内容质量能比人工好吗？</h4>
-      <p>选题和数据分析方面AI远超人工（处理全网数据），内容创作方面AI提供高质量初稿，人工只需微调。实测：AI初稿+15分钟人工润色 > 纯人工2小时写出来的效果。关键是人工时间被释放出来做只有人能做的事：选题判断、内容调性、粉丝互动。</p>
-    </div>
-    <div class="faq-item">
-      <h4>会被平台判定为AI内容限流吗？</h4>
-      <p>我们采用"AI生成+人工润色"混合策略，数字人视频支持真人形象克隆（用自己的脸+声音）。配合多账号指纹隔离技术，有效降低被判定风险。核心原则：AI做80%，人做20%的关键判断。</p>
-    </div>
-    <div class="faq-item">
-      <h4>适合什么类型的创作者？</h4>
-      <p>最适合信息密集型赛道：知识科普、行业解读、新闻评论、产品讲解。需要实拍画面质感的Vlog/美食/开箱类内容，AI目前还替代不了实拍——但我们帮你把选题和脚本搞定，你只负责拍。</p>
+    <p style="text-align:center; font-size:14px; color:var(--text-mute); margin-top:24px;">AI 做 80%，人做 20% 的关键判断</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="section-inner">
+    <div class="section-label">FOR</div>
+    <h2 class="section-title">适用人群</h2>
+    <div class="audience-grid">
+      <div class="audience-card"><div class="emoji">🏢</div><h4>品牌方</h4><p>规模化内容产出，统一管理品牌社媒</p></div>
+      <div class="audience-card"><div class="emoji">🎙️</div><h4>创始人 IP</h4><p>数字人帮你日更，保持 IP 热度</p></div>
+      <div class="audience-card"><div class="emoji">📺</div><h4>MCN 机构</h4><p>矩阵账号统一管理与数据追踪</p></div>
+      <div class="audience-card"><div class="emoji">✏️</div><h4>自媒体个体</h4><p>一个人等于一个团队</p></div>
     </div>
   </div>
 </section>
 
-<div class="cta-section">
-  <h2>把4小时的活压缩到30分钟</h2>
-  <p>看看你的内容工作流里哪些环节可以AI化</p>
-  <a href="mailto:contact@yiliu.ai" class="btn">免费诊断你的内容工作流</a>
+<div class="cta">
+  <h2>让 AI 替你做重复劳动</h2>
+  <p>看看你的内容工作流里哪些环节可以 AI 化</p>
+  <a href="mailto:1flowShenzhen@gmail.com" class="btn btn-primary">交流咨询</a>
 </div>
 
 <footer>
-  <div style="font-size:20px;font-weight:700;color:#a29bfe;margin-bottom:12px;">继流智能</div>
-  <p>深圳市镒流智能科技有限公司 © 2026 | 深圳市南山区腾讯众创空间</p>
-  <p style="margin-top:8px;"><a href="mailto:contact@yiliu.ai">contact@yiliu.ai</a></p>
+  <div style="font-size:18px; font-weight:700; margin-bottom:12px; letter-spacing:-0.02em;">继流智能</div>
+  <div style="font-size:13px; color:var(--text-mute); line-height:1.8;">
+    深圳市镒流智能科技有限公司 © 2026 · 深圳市南山区腾讯众创空间<br>
+    <a href="mailto:1flowShenzhen@gmail.com">1flowShenzhen@gmail.com</a>
+  </div>
 </footer>
 
 </body>
